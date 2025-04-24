@@ -70,7 +70,10 @@ const ContainerDetail = () => {
     },
   };
 
-  const container = containerTypes[id as keyof typeof containerTypes];
+  // Convert id from string to number and check if it's a valid key
+  const numericId = id ? parseInt(id) : 0;
+  const validId = numericId in containerTypes ? numericId as keyof typeof containerTypes : 1;
+  const container = containerTypes[validId];
 
   const handleAddToCart = () => {
     toast({
