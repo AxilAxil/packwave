@@ -7,6 +7,9 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Navbar from "@/components/Navbar";
 import HelpWidget from "@/components/HelpWidget";
 import Home from "@/pages/Index";
+import About from "@/pages/About";
+import Order from "@/pages/Order";
+import Contact from "@/pages/Contact";
 import NotFound from "@/pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -21,6 +24,9 @@ const App = () => (
           <Navbar />
           <Routes>
             <Route path="/" element={<Home />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/order" element={<Order />} />
+            <Route path="/contact" element={<Contact />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
           <HelpWidget />
