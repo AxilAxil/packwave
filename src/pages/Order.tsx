@@ -1,4 +1,3 @@
-
 import { Button } from "@/components/ui/button";
 import { useState } from "react";
 import { Link } from "react-router-dom";
@@ -11,21 +10,25 @@ const Order = () => {
       id: 1,
       name: "Regular Slotted Container",
       description: "Standard box with top and bottom flaps that meet in the middle",
+      image: "https://images.unsplash.com/photo-1506744038136-46273834b3fb"
     },
     {
       id: 2,
       name: "Half Slotted Container",
       description: "Similar to RSC but with no top flaps",
+      image: "https://images.unsplash.com/photo-1500673922987-e212871fec22"
     },
     {
       id: 3,
       name: "Full Overlap Container",
       description: "Box with top and bottom flaps that completely overlap",
+      image: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158"
     },
     {
       id: 4,
       name: "Custom Design",
       description: "Tailored to your specific requirements",
+      image: "https://images.unsplash.com/photo-1649972904349-6e44c42644a7"
     },
   ];
 
@@ -46,15 +49,19 @@ const Order = () => {
                 }`}
                 onClick={() => setOrderType(type.name)}
               >
-                <div className="h-40 bg-gray-100 flex items-center justify-center mb-4 rounded">
-                  <span className="text-gray-500">Box Image</span>
+                <div className="h-40 overflow-hidden rounded-lg mb-4">
+                  <img 
+                    src={type.image} 
+                    alt={type.name}
+                    className="w-full h-full object-cover"
+                  />
                 </div>
                 <h3 className="font-medium text-center mb-2">{type.name}</h3>
                 <p className="text-gray-600 text-sm mb-4">{type.description}</p>
                 <div className="text-center">
                   <Link to={`/container/${type.id}`}>
                     <Button 
-                      className="bg-[#f97316] hover:bg-[#ea580c] text-white"
+                      className="bg-[#f97316] hover:text-white hover:bg-[#1a365d]"
                     >
                       View Details
                     </Button>

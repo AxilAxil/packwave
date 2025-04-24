@@ -17,16 +17,18 @@ const Home = () => {
               PackWave specializes in manufacturing high-quality corrugated boxes tailored to your specific needs. Transform your packaging experience with our innovative solutions.
             </p>
             <Button 
-              className="bg-[#f97316] hover:bg-[#ea580c] text-white px-8 py-6 text-lg"
+              className="bg-[#f97316] hover:text-white hover:bg-[#1a365d] text-white px-8 py-6 text-lg"
               onClick={() => navigate("/order")}
             >
               Order Now
             </Button>
           </div>
           <div className="md:w-1/2">
-            <div className="bg-gray-200 rounded-lg h-96 flex items-center justify-center">
-              <span className="text-gray-500">Hero Image Placeholder</span>
-            </div>
+            <img 
+              src="https://images.unsplash.com/photo-1488590528505-98d2b5aba04b" 
+              alt="Packaging Solutions" 
+              className="rounded-lg w-full h-96 object-cover"
+            />
           </div>
         </div>
       </div>
