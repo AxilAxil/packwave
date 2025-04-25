@@ -1,7 +1,19 @@
 
 import { Button } from "@/components/ui/button";
+import { useToast } from "@/hooks/use-toast";
 
 const Contact = () => {
+  const { toast } = useToast();
+
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    toast({
+      title: "Message Sent",
+      description: "We'll get back to you soon!",
+    });
+    // Form will be connected to email service later
+  };
+
   return (
     <div className="min-h-screen pt-16 pb-10">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
@@ -9,12 +21,13 @@ const Contact = () => {
         
         <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
           <div>
-            <form className="space-y-6" onSubmit={(e) => e.preventDefault()}>
+            <form className="space-y-6" onSubmit={handleSubmit}>
               <div>
                 <label className="block text-sm font-medium text-gray-700 mb-1">
                   Your Name
                 </label>
                 <input
+                  required
                   type="text"
                   className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#f97316]"
                   placeholder="John Doe"
@@ -23,9 +36,22 @@ const Contact = () => {
               
               <div>
                 <label className="block text-sm font-medium text-gray-700 mb-1">
+                  Phone Number
+                </label>
+                <input
+                  required
+                  type="tel"
+                  className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#f97316]"
+                  placeholder="(555) 123-4567"
+                />
+              </div>
+              
+              <div>
+                <label className="block text-sm font-medium text-gray-700 mb-1">
                   Email Address
                 </label>
                 <input
+                  required
                   type="email"
                   className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#f97316]"
                   placeholder="john@example.com"
@@ -34,28 +60,18 @@ const Contact = () => {
               
               <div>
                 <label className="block text-sm font-medium text-gray-700 mb-1">
-                  Subject
-                </label>
-                <input
-                  type="text"
-                  className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#f97316]"
-                  placeholder="Inquiry about custom boxes"
-                />
-              </div>
-              
-              <div>
-                <label className="block text-sm font-medium text-gray-700 mb-1">
                   Message
                 </label>
                 <textarea
+                  required
                   className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#f97316] h-32"
                   placeholder="Please describe how we can help you..."
                 />
               </div>
               
               <Button 
-                className="bg-[#f97316] hover:bg-[#ea580c] text-white px-8 py-2"
-                onClick={() => alert("Contact form will be implemented in the next phase")}
+                type="submit"
+                className="bg-[#f97316] hover:text-[#f97316] hover:bg-white border-2 border-[#f97316]"
               >
                 Submit Message
               </Button>

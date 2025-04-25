@@ -1,6 +1,6 @@
-
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
+import { ShoppingCart } from "lucide-react";
 
 const Navbar = () => {
   return (
@@ -14,12 +14,14 @@ const Navbar = () => {
           </div>
           
           <div className="hidden sm:flex sm:items-center sm:space-x-8">
-            <Link to="/" className="text-gray-600 hover:text-gray-900">Home</Link>
-            <Link to="/about" className="text-gray-600 hover:text-gray-900">About</Link>
-            <Link to="/order" className="text-gray-600 hover:text-gray-900">Order</Link>
-            <Link to="/contact" className="text-gray-600 hover:text-gray-900">Contact Us</Link>
-            <Button variant="outline" className="mr-2">Sign In</Button>
-            <Button>Sign Up</Button>
+            <Link to="/" className="text-gray-600 hover:text-[#f97316]">Home</Link>
+            <Link to="/about" className="text-gray-600 hover:text-[#f97316]">About</Link>
+            <Link to="/order" className="text-gray-600 hover:text-[#f97316]">Order</Link>
+            <Link to="/favorites" className="text-gray-600 hover:text-[#f97316]">Favorites</Link>
+            <Link to="/contact" className="text-gray-600 hover:text-[#f97316]">Contact Us</Link>
+            <Link to="/cart" className="text-gray-600 hover:text-[#f97316]">
+              <ShoppingCart className="h-6 w-6" />
+            </Link>
           </div>
           
           <div className="sm:hidden">

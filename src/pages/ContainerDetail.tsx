@@ -1,7 +1,7 @@
-
 import { useParams } from 'react-router-dom';
 import { Button } from "@/components/ui/button";
 import { useToast } from "@/hooks/use-toast";
+import { ShoppingCart, Heart } from 'react-feather';
 
 const ContainerDetail = () => {
   const { id } = useParams();
@@ -70,16 +70,36 @@ const ContainerDetail = () => {
     },
   };
 
-  // Convert id from string to number and check if it's a valid key
   const numericId = id ? parseInt(id) : 0;
   const validId = numericId in containerTypes ? numericId as keyof typeof containerTypes : 1;
   const container = containerTypes[validId];
 
   const handleAddToCart = () => {
+    const cart = JSON.parse(localStorage.getItem('cart') || '[]');
+    cart.push({ ...container, id: validId, quantity: 1, price: 99.99 });
+    localStorage.setItem('cart', JSON.stringify(cart));
+    
     toast({
       title: "Added to Cart",
       description: `${container.name} has been added to your cart.`,
     });
+  };
+
+  const handleAddToFavorites = () => {
+    const favorites = JSON.parse(localStorage.getItem('favorites') || '[]');
+    if (!favorites.some((item: any) => item.id === validId)) {
+      favorites.push({ ...container, id: validId });
+      localStorage.setItem('favorites', JSON.stringify(favorites));
+      toast({
+        title: "Added to Favorites",
+        description: `${container.name} has been added to your favorites.`,
+      });
+    } else {
+      toast({
+        title: "Already in Favorites",
+        description: `${container.name} is already in your favorites.`,
+      });
+    }
   };
 
   if (!container) {
@@ -121,12 +141,23 @@ const ContainerDetail = () => {
                 </div>
               </div>
               
-              <Button 
-                className="bg-[#f97316] hover:bg-[#ea580c] text-white px-8 py-2 text-lg"
-                onClick={handleAddToCart}
-              >
-                Add to Cart
-              </Button>
+              <div className="flex space-x-4">
+                <Button 
+                  className="bg-[#f97316] hover:text-[#f97316] hover:bg-white border-2 border-[#f97316] text-lg"
+                  onClick={handleAddToCart}
+                >
+                  <ShoppingCart className="mr-2" />
+                  Add to Cart
+                </Button>
+                <Button
+                  variant="outline"
+                  onClick={handleAddToFavorites}
+                  className="border-2 border-[#f97316] text-[#f97316] hover:bg-[#f97316] hover:text-white"
+                >
+                  <Heart className="mr-2" />
+                  Add to Favorites
+                </Button>
+              </div>
             </div>
           </div>
         </div>

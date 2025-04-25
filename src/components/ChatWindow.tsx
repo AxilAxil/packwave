@@ -1,6 +1,5 @@
-
 import { useState } from "react";
-import { MessageSquare } from "lucide-react";
+import { MessageSquare, X } from "lucide-react";
 import { Button } from "./ui/button";
 
 const ChatWindow = () => {
@@ -36,8 +35,16 @@ const ChatWindow = () => {
       
       {isOpen && (
         <div className="fixed bottom-20 right-4 w-80 bg-white rounded-lg shadow-xl z-50 border border-gray-200">
-          <div className="bg-[#1a365d] text-white p-4 rounded-t-lg">
+          <div className="bg-[#1a365d] text-white p-4 rounded-t-lg flex justify-between items-center">
             <h3 className="font-semibold">Support Chat</h3>
+            <Button 
+              variant="ghost" 
+              size="icon"
+              className="text-white hover:bg-[#f97316]"
+              onClick={() => setIsOpen(false)}
+            >
+              <X className="h-4 w-4" />
+            </Button>
           </div>
           
           <div className="h-80 p-4 overflow-y-auto space-y-4">

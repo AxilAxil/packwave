@@ -1,4 +1,3 @@
-
 import { Copyright, Facebook, Instagram, Linkedin, Mail, Phone, Twitter } from "lucide-react";
 import { Link } from "react-router-dom";
 
@@ -17,10 +16,10 @@ const Footer = () => {
           <div>
             <h3 className="text-xl font-semibold mb-4">Quick Links</h3>
             <ul className="space-y-2">
-              <li><Link to="/" className="text-gray-300 hover:text-white">Home</Link></li>
-              <li><Link to="/about" className="text-gray-300 hover:text-white">About</Link></li>
-              <li><Link to="/order" className="text-gray-300 hover:text-white">Order</Link></li>
-              <li><Link to="/contact" className="text-gray-300 hover:text-white">Contact</Link></li>
+              <li><Link to="/" className="text-gray-300 hover:text-[#f97316]">Home</Link></li>
+              <li><Link to="/about" className="text-gray-300 hover:text-[#f97316]">About</Link></li>
+              <li><Link to="/order" className="text-gray-300 hover:text-[#f97316]">Order</Link></li>
+              <li><Link to="/contact" className="text-gray-300 hover:text-[#f97316]">Contact</Link></li>
             </ul>
           </div>
           
@@ -39,16 +38,16 @@ const Footer = () => {
           <div>
             <h3 className="text-xl font-semibold mb-4">Follow Us</h3>
             <div className="flex space-x-4">
-              <a href="#" className="text-gray-300 hover:text-white">
+              <a href="#" className="text-gray-300 hover:text-[#f97316]">
                 <Facebook size={20} />
               </a>
-              <a href="#" className="text-gray-300 hover:text-white">
+              <a href="#" className="text-gray-300 hover:text-[#f97316]">
                 <Twitter size={20} />
               </a>
-              <a href="#" className="text-gray-300 hover:text-white">
+              <a href="#" className="text-gray-300 hover:text-[#f97316]">
                 <Instagram size={20} />
               </a>
-              <a href="#" className="text-gray-300 hover:text-white">
+              <a href="#" className="text-gray-300 hover:text-[#f97316]">
                 <Linkedin size={20} />
               </a>
             </div>
