@@ -25,7 +25,7 @@ const Home = () => {
           </div>
           <div className="md:w-1/2">
             <img 
-              src="/lovable-uploads/19b44ba9-72ce-4c1c-83de-c21631592a10.png" 
+              src="/lovable-uploads/c8eb6e7a-8190-4e9b-b63b-e7029672302f.png" 
               alt="Packaging Solutions" 
               className="rounded-lg w-full h-96 object-cover"
             />

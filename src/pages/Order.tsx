@@ -1,10 +1,50 @@
 import { Button } from "@/components/ui/button";
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import { Heart, HeartOff } from "lucide-react";
+import { useToast } from "@/hooks/use-toast";
 
 const Order = () => {
   const [orderType, setOrderType] = useState<string>("");
+  const [showContactInfo, setShowContactInfo] = useState<{ [key: number]: boolean }>({});
+  const [favorites, setFavorites] = useState<number[]>(() => {
+    const saved = localStorage.getItem('favorites');
+    return saved ? JSON.parse(saved).map((item: any) => item.id) : [];
+  });
+  const { toast } = useToast();
   
+  const toggleFavorite = (type: any) => {
+    const isFavorite = favorites.includes(type.id);
+    let updatedFavorites;
+    
+    if (isFavorite) {
+      updatedFavorites = favorites.filter(id => id !== type.id);
+      const savedFavorites = JSON.parse(localStorage.getItem('favorites') || '[]');
+      const filteredFavorites = savedFavorites.filter((item: any) => item.id !== type.id);
+      localStorage.setItem('favorites', JSON.stringify(filteredFavorites));
+      toast({
+        title: "Removed from Favorites",
+        description: `${type.name} has been removed from your favorites.`,
+      });
+    } else {
+      updatedFavorites = [...favorites, type.id];
+      const savedFavorites = JSON.parse(localStorage.getItem('favorites') || '[]');
+      savedFavorites.push(type);
+      localStorage.setItem('favorites', JSON.stringify(savedFavorites));
+      toast({
+        title: "Added to Favorites",
+        description: `${type.name} has been added to your favorites.`,
+      });
+    }
+    
+    setFavorites(updatedFavorites);
+  };
+
+  const handleCallToOrder = (typeId: number) => {
+    setShowContactInfo(prev => ({ ...prev, [typeId]: !prev[typeId] }));
+    window.open('tel:+15551234567');
+  };
+
   const containerTypes = [
     {
       id: 1,
@@ -50,22 +90,43 @@ const Order = () => {
                 }`}
                 onClick={() => setOrderType(type.name)}
               >
-                <div className="h-40 overflow-hidden rounded-lg mb-4">
-                  <img 
-                    src={type.image} 
-                    alt={type.name}
-                    className="w-full h-full object-cover"
-                  />
-                </div>
+              <div className="relative h-40 overflow-hidden rounded-lg mb-4">
+                <img 
+                  src={type.image} 
+                  alt={type.name}
+                  className="w-full h-full object-cover"
+                />
+                <button
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    toggleFavorite(type);
+                  }}
+                  className="absolute top-2 right-2 p-2 bg-white rounded-full shadow-md hover:bg-gray-50"
+                >
+                  {favorites.includes(type.id) ? (
+                    <Heart className="h-5 w-5 text-red-500 fill-current" />
+                  ) : (
+                    <Heart className="h-5 w-5 text-gray-400" />
+                  )}
+                </button>
+              </div>
                 <h3 className="font-medium text-center mb-2">{type.name}</h3>
                 <p className="text-gray-600 text-sm mb-4">{type.description}</p>
                 <div className="text-center">
                   <Button 
                     className="bg-[#f97316] hover:text-white hover:bg-[#1a365d]"
-                    onClick={() => window.open('tel:+15551234567')}
+                    onClick={() => handleCallToOrder(type.id)}
                   >
                     Call to Order
                   </Button>
+                  {showContactInfo[type.id] && (
+                    <div className="mt-4 p-3 bg-gray-50 rounded-lg">
+                      <p className="text-sm text-gray-700">
+                        Call on this number to place order: <strong>(555) 123-4567</strong><br />
+                        Or drop an email at: <strong>info@packwave.com</strong>
+                      </p>
+                    </div>
+                  )}
                 </div>
               </div>
             ))}
