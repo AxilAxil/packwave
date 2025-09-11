@@ -8,7 +8,6 @@ import ChatWindow from "@/components/ChatWindow";
 import Footer from "@/components/Footer";
 import Home from "@/pages/Index";
 import About from "@/pages/About";
-import Order from "@/pages/Order";
 import Contact from "@/pages/Contact";
 import NotFound from "@/pages/NotFound";
 import ContainerDetail from "@/pages/ContainerDetail";
@@ -29,7 +28,6 @@ const App = () => (
             <Routes>
               <Route path="/" element={<Home />} />
               <Route path="/about" element={<About />} />
-              <Route path="/order" element={<Order />} />
               <Route path="/contact" element={<Contact />} />
               <Route path="/container/:id" element={<ContainerDetail />} />
               <Route path="/cart" element={<Cart />} />
