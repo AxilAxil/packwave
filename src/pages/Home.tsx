@@ -18,14 +18,14 @@ const Home = () => {
             </p>
             <Button 
               className="bg-[#f97316] hover:text-white hover:bg-[#1a365d] text-white px-8 py-6 text-lg"
-              onClick={() => navigate("/order")}
+              onClick={() => window.open('tel:+15551234567')}
             >
-              Order Now
+              Call to Order
             </Button>
           </div>
           <div className="md:w-1/2">
             <img 
-              src="https://images.unsplash.com/photo-1488590528505-98d2b5aba04b" 
+              src="/lovable-uploads/19b44ba9-72ce-4c1c-83de-c21631592a10.png" 
               alt="Packaging Solutions" 
               className="rounded-lg w-full h-96 object-cover"
             />

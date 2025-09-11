@@ -1,7 +1,7 @@
 import { useParams } from 'react-router-dom';
 import { Button } from "@/components/ui/button";
 import { useToast } from "@/hooks/use-toast";
-import { ShoppingCart, Heart } from 'react-feather';
+import { ShoppingCart, Heart, Phone } from 'lucide-react';
 
 const ContainerDetail = () => {
   const { id } = useParams();
@@ -11,9 +11,10 @@ const ContainerDetail = () => {
     1: {
       name: "Regular Slotted Container",
       description: "Standard box with top and bottom flaps that meet in the middle",
+      image: "/lovable-uploads/7f1a93cc-3283-4c06-858b-63cddf0c8cf7.png",
       features: [
         "Most common box style",
-        "Economical and versatile",
+        "Economical and versatile", 
         "Suitable for most products",
         "Easy to assemble",
       ],
@@ -26,6 +27,7 @@ const ContainerDetail = () => {
     2: {
       name: "Half Slotted Container",
       description: "Similar to RSC but with no top flaps",
+      image: "/lovable-uploads/9f7341c4-75a6-4766-a89d-b3cd3017c38a.png",
       features: [
         "Open top design",
         "Perfect for display purposes",
@@ -39,8 +41,9 @@ const ContainerDetail = () => {
       },
     },
     3: {
-      name: "Full Overlap Container",
+      name: "Full Overlap Container", 
       description: "Box with top and bottom flaps that completely overlap",
+      image: "/lovable-uploads/c8eb6e7a-8190-4e9b-b63b-e7029672302f.png",
       features: [
         "Maximum stacking strength",
         "Extra protection",
@@ -55,7 +58,8 @@ const ContainerDetail = () => {
     },
     4: {
       name: "Custom Design",
-      description: "Tailored to your specific requirements",
+      description: "Tailored to your specific requirements", 
+      image: "/lovable-uploads/b20d83b7-0f28-45c6-83a2-2ab2f2b819a6.png",
       features: [
         "Fully customizable",
         "Unique specifications",
@@ -74,15 +78,8 @@ const ContainerDetail = () => {
   const validId = numericId in containerTypes ? numericId as keyof typeof containerTypes : 1;
   const container = containerTypes[validId];
 
-  const handleAddToCart = () => {
-    const cart = JSON.parse(localStorage.getItem('cart') || '[]');
-    cart.push({ ...container, id: validId, quantity: 1, price: 99.99 });
-    localStorage.setItem('cart', JSON.stringify(cart));
-    
-    toast({
-      title: "Added to Cart",
-      description: `${container.name} has been added to your cart.`,
-    });
+  const handleCallToOrder = () => {
+    window.open('tel:+15551234567');
   };
 
   const handleAddToFavorites = () => {
@@ -112,9 +109,11 @@ const ContainerDetail = () => {
         <div className="bg-white p-8 rounded-lg shadow-md">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <div>
-              <div className="h-80 bg-gray-100 flex items-center justify-center rounded-lg mb-4">
-                <span className="text-gray-500">Box Image</span>
-              </div>
+              <img 
+                src={container.image} 
+                alt={container.name}
+                className="w-full h-80 object-cover rounded-lg"
+              />
             </div>
             
             <div>
@@ -144,10 +143,10 @@ const ContainerDetail = () => {
               <div className="flex space-x-4">
                 <Button 
                   className="bg-[#f97316] hover:text-[#f97316] hover:bg-white border-2 border-[#f97316] text-lg"
-                  onClick={handleAddToCart}
+                  onClick={handleCallToOrder}
                 >
-                  <ShoppingCart className="mr-2" />
-                  Add to Cart
+                  <Phone className="mr-2" />
+                  Call to Order
                 </Button>
                 <Button
                   variant="outline"
