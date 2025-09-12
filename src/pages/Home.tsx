@@ -138,11 +138,7 @@ const Home = () => {
                 <div 
                   key={type.id}
                   data-container-card
-                  className={`bg-white border-2 border-gray-200 rounded-lg p-4 hover:border-gray-300 transition-all duration-300 ${
-                    Object.keys(showContactInfo).some(key => showContactInfo[parseInt(key)] && parseInt(key) !== type.id) 
-                      ? 'scale-105 shadow-lg' 
-                      : ''
-                  }`}
+                  className="bg-white border-2 border-gray-200 rounded-lg p-4 hover:border-gray-300 transition-colors"
                 >
                   <div className="relative h-40 overflow-hidden rounded-lg mb-4">
                     <img 
