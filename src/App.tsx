@@ -11,7 +11,7 @@ import About from "@/pages/About";
 import Contact from "@/pages/Contact";
 import NotFound from "@/pages/NotFound";
 import ContainerDetail from "@/pages/ContainerDetail";
-import Cart from "@/pages/Cart";
+
 import Favorites from "@/pages/Favorites";
 
 const queryClient = new QueryClient();
@@ -30,7 +30,6 @@ const App = () => (
               <Route path="/about" element={<About />} />
               <Route path="/contact" element={<Contact />} />
               <Route path="/container/:id" element={<ContainerDetail />} />
-              <Route path="/cart" element={<Cart />} />
               <Route path="/favorites" element={<Favorites />} />
               <Route path="*" element={<NotFound />} />
             </Routes>

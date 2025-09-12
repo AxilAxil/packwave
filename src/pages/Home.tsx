@@ -41,7 +41,6 @@ const Home = () => {
 
   const handleCallToOrder = (typeId: number) => {
     setShowContactInfo(prev => ({ ...prev, [typeId]: !prev[typeId] }));
-    window.open('tel:+15551234567');
   };
 
   const containerTypes = [
@@ -84,10 +83,18 @@ const Home = () => {
             </p>
             <Button 
               className="bg-[#f97316] hover:text-white hover:bg-[#1a365d] text-white px-8 py-6 text-lg"
-              onClick={() => window.open('tel:+15551234567')}
+              onClick={() => setShowContactInfo(prev => ({ ...prev, [0]: !prev[0] }))}
             >
               Call to Order
             </Button>
+            {showContactInfo[0] && (
+              <div className="mt-4 p-3 bg-gray-50 rounded-lg">
+                <p className="text-sm text-gray-700">
+                  To place order call: <strong>(555) 123-4567</strong><br />
+                  Or email: <strong>info@packwave.com</strong>
+                </p>
+              </div>
+            )}
           </div>
           <div className="md:w-1/2">
             <img 
@@ -137,8 +144,8 @@ const Home = () => {
                     {showContactInfo[type.id] && (
                       <div className="mt-4 p-3 bg-gray-50 rounded-lg">
                         <p className="text-sm text-gray-700">
-                          Call on this number to place order: <strong>(555) 123-4567</strong><br />
-                          Or drop an email at: <strong>info@packwave.com</strong>
+                          To place order call: <strong>(555) 123-4567</strong><br />
+                          Or email: <strong>info@packwave.com</strong>
                         </p>
                       </div>
                     )}

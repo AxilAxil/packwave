@@ -18,7 +18,7 @@ const ChatWindow = () => {
     // Simulate response
     setTimeout(() => {
       setMessages(prev => [...prev, {
-        text: "Thanks for your message! Our team will get back to you soon.",
+        text: "I'm a bot assistant. For specific inquiries, please call (555) 123-4567 or email info@packwave.com",
         isUser: false
       }]);
     }, 1000);
