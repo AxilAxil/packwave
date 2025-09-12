@@ -15,7 +15,17 @@ const Home = () => {
 
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
-      if (containerRef.current && !containerRef.current.contains(event.target as Node)) {
+      // Check if click is outside any container card
+      const containerCards = document.querySelectorAll('[data-container-card]');
+      let clickedOutside = true;
+      
+      containerCards.forEach(card => {
+        if (card.contains(event.target as Node)) {
+          clickedOutside = false;
+        }
+      });
+      
+      if (clickedOutside) {
         setShowContactInfo({});
       }
     };
@@ -120,13 +130,14 @@ const Home = () => {
         </div>
 
         {/* Container Types Section */}
-        <div className="py-20 bg-gray-50" ref={containerRef}>
+        <div className="py-20 bg-gray-50">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <h2 className="text-3xl font-bold text-[#1a365d] text-center mb-12">Our Container Types</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
               {containerTypes.map((type) => (
                 <div 
                   key={type.id}
+                  data-container-card
                   className="bg-white border-2 border-gray-200 rounded-lg p-4 hover:border-gray-300 transition-colors"
                 >
                   <div className="relative h-40 overflow-hidden rounded-lg mb-4">
