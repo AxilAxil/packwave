@@ -1,6 +1,6 @@
 
 import { Button } from "@/components/ui/button";
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 import { Heart } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
 
@@ -11,6 +11,20 @@ const Home = () => {
     return saved ? JSON.parse(saved).map((item: any) => item.id) : [];
   });
   const { toast } = useToast();
+  const containerRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (containerRef.current && !containerRef.current.contains(event.target as Node)) {
+        setShowContactInfo({});
+      }
+    };
+
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside);
+    };
+  }, []);
   
   const toggleFavorite = (type: any) => {
     const isFavorite = favorites.includes(type.id);
@@ -85,7 +99,7 @@ const Home = () => {
               className="bg-[#f97316] hover:text-white hover:bg-[#1a365d] text-white px-8 py-6 text-lg"
               onClick={() => setShowContactInfo(prev => ({ ...prev, [0]: !prev[0] }))}
             >
-              Call to Order
+              {showContactInfo[0] ? "Call to Order" : "Order now"}
             </Button>
             {showContactInfo[0] && (
               <div className="mt-4 p-3 bg-gray-50 rounded-lg">
@@ -106,7 +120,7 @@ const Home = () => {
         </div>
 
         {/* Container Types Section */}
-        <div className="py-20 bg-gray-50">
+        <div className="py-20 bg-gray-50" ref={containerRef}>
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <h2 className="text-3xl font-bold text-[#1a365d] text-center mb-12">Our Container Types</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -139,7 +153,7 @@ const Home = () => {
                       className="bg-[#f97316] hover:text-white hover:bg-[#1a365d]"
                       onClick={() => handleCallToOrder(type.id)}
                     >
-                      Call to Order
+                      {showContactInfo[type.id] ? "Call to Order" : "Order now"}
                     </Button>
                     {showContactInfo[type.id] && (
                       <div className="mt-4 p-3 bg-gray-50 rounded-lg">
