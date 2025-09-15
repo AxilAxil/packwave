@@ -1,71 +1,9 @@
 
 import { Button } from "@/components/ui/button";
-import { useState, useEffect, useRef } from "react";
-import { Heart } from "lucide-react";
-import { useToast } from "@/hooks/use-toast";
+import { useState } from "react";
 
 const Home = () => {
   const [showContactInfo, setShowContactInfo] = useState<{ [key: number]: boolean }>({});
-  const [favorites, setFavorites] = useState<number[]>(() => {
-    const saved = localStorage.getItem('favorites');
-    return saved ? JSON.parse(saved).map((item: any) => item.id) : [];
-  });
-  const { toast } = useToast();
-  const containerRef = useRef<HTMLDivElement>(null);
-
-  useEffect(() => {
-    const handleClickOutside = (event: MouseEvent) => {
-      // Check if click is outside any container card
-      const containerCards = document.querySelectorAll('[data-container-card]');
-      let clickedOutside = true;
-      
-      containerCards.forEach(card => {
-        if (card.contains(event.target as Node)) {
-          clickedOutside = false;
-        }
-      });
-      
-      if (clickedOutside) {
-        setShowContactInfo({});
-      }
-    };
-
-    document.addEventListener('mousedown', handleClickOutside);
-    return () => {
-      document.removeEventListener('mousedown', handleClickOutside);
-    };
-  }, []);
-  
-  const toggleFavorite = (type: any) => {
-    const isFavorite = favorites.includes(type.id);
-    let updatedFavorites;
-    
-    if (isFavorite) {
-      updatedFavorites = favorites.filter(id => id !== type.id);
-      const savedFavorites = JSON.parse(localStorage.getItem('favorites') || '[]');
-      const filteredFavorites = savedFavorites.filter((item: any) => item.id !== type.id);
-      localStorage.setItem('favorites', JSON.stringify(filteredFavorites));
-      toast({
-        title: "Removed from Favorites",
-        description: `${type.name} has been removed from your favorites.`,
-      });
-    } else {
-      updatedFavorites = [...favorites, type.id];
-      const savedFavorites = JSON.parse(localStorage.getItem('favorites') || '[]');
-      savedFavorites.push(type);
-      localStorage.setItem('favorites', JSON.stringify(savedFavorites));
-      toast({
-        title: "Added to Favorites",
-        description: `${type.name} has been added to your favorites.`,
-      });
-    }
-    
-    setFavorites(updatedFavorites);
-  };
-
-  const handleCallToOrder = (typeId: number) => {
-    setShowContactInfo(prev => ({ ...prev, [typeId]: !prev[typeId] }));
-  };
 
   const containerTypes = [
     {
@@ -140,41 +78,15 @@ const Home = () => {
                   data-container-card
                   className="bg-white border-2 border-gray-200 rounded-lg p-4 hover:border-gray-300 transition-colors"
                 >
-                  <div className="relative h-40 overflow-hidden rounded-lg mb-4">
+                  <div className="h-40 overflow-hidden rounded-lg mb-4">
                     <img 
                       src={type.image} 
                       alt={type.name}
                       className="w-full h-full object-cover"
                     />
-                    <button
-                      onClick={() => toggleFavorite(type)}
-                      className="absolute top-2 right-2 p-2 bg-white rounded-full shadow-md hover:bg-gray-50"
-                    >
-                      {favorites.includes(type.id) ? (
-                        <Heart className="h-5 w-5 text-red-500 fill-current" />
-                      ) : (
-                        <Heart className="h-5 w-5 text-gray-400" />
-                      )}
-                    </button>
                   </div>
                   <h3 className="font-medium text-center mb-2">{type.name}</h3>
-                  <p className="text-gray-600 text-sm mb-4">{type.description}</p>
-                  <div className="text-center">
-                    <Button 
-                      className="bg-[#f97316] hover:text-white hover:bg-[#1a365d]"
-                      onClick={() => handleCallToOrder(type.id)}
-                    >
-                      Order now
-                    </Button>
-                    {showContactInfo[type.id] && (
-                      <div className="mt-4 p-3 bg-gray-50 rounded-lg">
-                        <p className="text-sm text-gray-700">
-                          To place order call: <strong>(555) 123-4567</strong><br />
-                          Or email: <strong>info@packwave.com</strong>
-                        </p>
-                      </div>
-                    )}
-                  </div>
+                  <p className="text-gray-600 text-sm">{type.description}</p>
                 </div>
               ))}
             </div>

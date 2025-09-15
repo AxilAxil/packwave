@@ -4,7 +4,6 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Navbar from "@/components/Navbar";
-import ChatWindow from "@/components/ChatWindow";
 import Footer from "@/components/Footer";
 import Home from "@/pages/Index";
 import About from "@/pages/About";
@@ -35,7 +34,6 @@ const App = () => (
             </Routes>
           </div>
           <Footer />
-          <ChatWindow />
         </div>
       </BrowserRouter>
     </TooltipProvider>

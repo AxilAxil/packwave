@@ -1,6 +1,5 @@
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { User } from "lucide-react";
 
 const Navbar = () => {
   return (
@@ -16,11 +15,7 @@ const Navbar = () => {
           <div className="hidden sm:flex sm:items-center sm:space-x-8">
             <Link to="/" className="text-gray-600 hover:text-[#f97316]">Home</Link>
             <Link to="/about" className="text-gray-600 hover:text-[#f97316]">About</Link>
-            <Link to="/favorites" className="text-gray-600 hover:text-[#f97316]">Favorites</Link>
             <Link to="/contact" className="text-gray-600 hover:text-[#f97316]">Contact Us</Link>
-            <Button variant="ghost" className="text-gray-600 hover:text-[#f97316]">
-              <User className="h-6 w-6" />
-            </Button>
           </div>
           
           <div className="sm:hidden">
