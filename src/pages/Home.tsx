@@ -1,9 +1,26 @@
 
 import { Button } from "@/components/ui/button";
-import { useState } from "react";
+import { useState, useRef, useEffect } from "react";
 
 const Home = () => {
   const [showContactInfo, setShowContactInfo] = useState<{ [key: number]: boolean }>({});
+  const contactInfoRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (contactInfoRef.current && !contactInfoRef.current.contains(event.target as Node)) {
+        setShowContactInfo(prev => ({ ...prev, [0]: false }));
+      }
+    };
+
+    if (showContactInfo[0]) {
+      document.addEventListener('mousedown', handleClickOutside);
+    }
+
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside);
+    };
+  }, [showContactInfo[0]]);
 
   const containerTypes = [
     {
@@ -50,7 +67,7 @@ const Home = () => {
               {showContactInfo[0] ? "Call to Order" : "Order now"}
             </Button>
             {showContactInfo[0] && (
-              <div className="mt-4 p-3 bg-gray-50 rounded-lg">
+              <div ref={contactInfoRef} className="mt-4 p-3 bg-gray-50 rounded-lg">
                 <p className="text-sm text-gray-700">
                   To place order call: <strong>(555) 123-4567</strong><br />
                   Or email: <strong>info@packwave.com</strong>
