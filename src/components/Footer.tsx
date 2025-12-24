@@ -26,10 +26,10 @@ const Footer = () => {
             <h3 className="text-xl font-semibold mb-4">Contact Info</h3>
             <ul className="space-y-2">
               <li className="flex items-center gap-2 text-gray-300">
-                <Phone size={16} /> (555) 123-4567
+                <Phone size={16} /> +91 7202031313 (Axil Patel)
               </li>
               <li className="flex items-center gap-2 text-gray-300">
-                <Mail size={16} /> info@packwave.com
+                <Mail size={16} /> packwaveindustries@gmail.com
               </li>
             </ul>
           </div>

@@ -95,9 +95,10 @@ const Contact = () => {
             
             <div>
               <h3 className="text-lg font-medium text-[#1a365d] mb-2">Contact Information</h3>
-              <p className="text-gray-600">Email: info@packwave.com</p>
-              <p className="text-gray-600">Phone: (555) 123-4567</p>
-              <p className="text-gray-600">Address: 1234 Box Avenue, Packaging City, PC 12345</p>
+              <p className="text-gray-600">Contact Person: Axil Patel</p>
+              <p className="text-gray-600">Phone: +91 7202031313</p>
+              <p className="text-gray-600">Email: packwaveindustries@gmail.com</p>
+              <p className="text-gray-600">Address: Plot No: 24 to 28, Arya Industrial-4, Near Radhe Industrial-2, Olpad Sayan Road, Surat - 394540</p>
             </div>
           </div>
         </div>
