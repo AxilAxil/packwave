@@ -9,10 +9,13 @@ const About = () => {
           <div>
             <h2 className="text-2xl font-semibold text-[#1a365d] mb-4">Our Story</h2>
             <p className="text-gray-600 mb-4">
-              Founded in 2010, PackWave has grown from a small family business into a leading manufacturer of custom corrugated packaging solutions. Our journey began with a simple mission: to provide businesses with high-quality packaging that meets their specific needs.
+              Our journey began with hard work, integrity, and a simple belief: do honest work and take care of people.
             </p>
             <p className="text-gray-600 mb-4">
-              Over the years, we've invested in cutting-edge technology and skilled craftspeople to ensure that every box we produce meets our exacting standards. Our commitment to quality, innovation, and customer satisfaction has helped us build lasting relationships with clients across various industries.
+              Built by a father-and-son team, our business grew from hands-on effort, long hours, and a deep commitment to our customers and employees. Rooted in strong Indian values, we focused on trust, quality, and long-term relationships rather than quick wins.
+            </p>
+            <p className="text-gray-600 mb-4">
+              Today, we continue to grow with the same principles, carrying our values forward as we expand beyond India and work with clients globally.
             </p>
           </div>
           
@@ -24,23 +27,23 @@ const About = () => {
             <h2 className="text-2xl font-semibold text-[#1a365d] mb-4">Our Values</h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
               <div className="bg-white p-6 rounded-lg shadow-md">
-                <h3 className="text-xl font-medium text-[#f97316] mb-2">Quality</h3>
+                <h3 className="text-xl font-medium text-[#f97316] mb-2">Integrity</h3>
                 <p className="text-gray-600">
-                  We never compromise on quality. Each product undergoes rigorous testing to ensure durability and reliability.
+                  We believe in honest work, transparency, and keeping our commitments. Trust is at the core of everything we do.
                 </p>
               </div>
               
               <div className="bg-white p-6 rounded-lg shadow-md">
-                <h3 className="text-xl font-medium text-[#f97316] mb-2">Innovation</h3>
+                <h3 className="text-xl font-medium text-[#f97316] mb-2">Customer & People First</h3>
                 <p className="text-gray-600">
-                  We constantly explore new technologies and methods to improve our products and processes.
+                  We care deeply about our customers and our employees. Building long-term relationships and treating people with respect guides every decision.
                 </p>
               </div>
               
               <div className="bg-white p-6 rounded-lg shadow-md">
-                <h3 className="text-xl font-medium text-[#f97316] mb-2">Sustainability</h3>
+                <h3 className="text-xl font-medium text-[#f97316] mb-2">Hard Work & Quality</h3>
                 <p className="text-gray-600">
-                  We're committed to environmentally responsible practices, using recycled materials and minimizing waste.
+                  We value dedication, discipline, and consistent effort. Quality is never compromised, and we take pride in work done right.
                 </p>
               </div>
             </div>
