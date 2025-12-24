@@ -78,29 +78,43 @@ const Contact = () => {
             </form>
           </div>
           
-          <div className="space-y-6">
+          <div className="space-y-8">
             <div>
-              <h2 className="text-2xl font-semibold text-[#1a365d] mb-4">Get In Touch</h2>
-              <p className="text-gray-600 mb-4">
-                Have questions about our products or services? Our team is here to help. Fill out the form or use the contact information below to reach us.
+              <h2 className="text-2xl font-semibold text-[#1a365d] mb-3">Get In Touch</h2>
+              <p className="text-gray-600">
+                Have questions? Fill out the form or contact us directly.
               </p>
             </div>
             
-            
-            <div>
-              <h3 className="text-lg font-medium text-[#1a365d] mb-2">Contact Information</h3>
-              <p className="text-gray-600">Contact Person: Axil Patel</p>
-              <p className="text-gray-600">Phone: +91 7202031313</p>
+            <div className="space-y-4">
+              <div className="flex items-center gap-3">
+                <span className="text-gray-500">👤</span>
+                <span className="text-gray-700 font-medium">Axil Patel</span>
+              </div>
+              
+              <div className="flex items-center gap-3">
+                <span className="text-gray-500">📞</span>
+                <a href="tel:+917202031313" className="text-gray-700 hover:text-[#f97316]">+91 7202031313</a>
+              </div>
+              
               <a 
                 href="https://wa.me/917202031313" 
                 target="_blank" 
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 text-[#25D366] hover:underline mt-1"
+                className="inline-flex items-center gap-3 text-[#25D366] hover:underline font-medium"
               >
-                💬 Chat on WhatsApp
+                <span>💬</span> Chat on WhatsApp
               </a>
-              <p className="text-gray-600 mt-2">Email: packwaveindustries@gmail.com</p>
-              <p className="text-gray-600">Address: Plot No: 24 to 28, Arya Industrial-4, Near Radhe Industrial-2, Olpad Sayan Road, Surat - 394540</p>
+              
+              <div className="flex items-center gap-3">
+                <span className="text-gray-500">✉️</span>
+                <a href="mailto:packwaveindustries@gmail.com" className="text-gray-700 hover:text-[#f97316]">packwaveindustries@gmail.com</a>
+              </div>
+              
+              <div className="flex items-start gap-3">
+                <span className="text-gray-500 mt-1">📍</span>
+                <span className="text-gray-700">Plot No: 24-28, Arya Industrial-4, Olpad Sayan Road, Surat - 394540</span>
+              </div>
             </div>
             
             <div className="mt-6">
