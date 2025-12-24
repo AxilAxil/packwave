@@ -108,6 +108,30 @@ const Contact = () => {
               <p className="text-gray-600 mt-2">Email: packwaveindustries@gmail.com</p>
               <p className="text-gray-600">Address: Plot No: 24 to 28, Arya Industrial-4, Near Radhe Industrial-2, Olpad Sayan Road, Surat - 394540</p>
             </div>
+            
+            <div className="mt-6">
+              <h3 className="text-lg font-medium text-[#1a365d] mb-3">Our Location</h3>
+              <div className="rounded-lg overflow-hidden border border-gray-200">
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3719.234567890123!2d72.8!3d21.15!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjHCsDA5JzAwLjAiTiA3MsKwNDgnMDAuMCJF!5e0!3m2!1sen!2sin!4v1234567890"
+                  width="100%"
+                  height="250"
+                  style={{ border: 0 }}
+                  allowFullScreen
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                  title="PackWave Office Location - Surat"
+                ></iframe>
+              </div>
+              <a 
+                href="https://www.google.com/maps/search/Plot+No+24+to+28+Arya+Industrial-4+Near+Radhe+Industrial-2+Olpad+Sayan+Road+Surat+394540"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 text-[#f97316] hover:underline text-sm mt-2"
+              >
+                📍 Open in Google Maps
+              </a>
+            </div>
           </div>
         </div>
       </div>
