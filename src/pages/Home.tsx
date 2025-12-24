@@ -69,8 +69,9 @@ const Home = () => {
             {showContactInfo[0] && (
               <div ref={contactInfoRef} className="mt-4 p-3 bg-gray-50 rounded-lg">
                 <p className="text-sm text-gray-700">
-                  To place order call: <strong>(555) 123-4567</strong><br />
-                  Or email: <strong>info@packwave.com</strong>
+                  Contact: <strong>Axil Patel</strong><br />
+                  Phone: <strong>+91 7202031313</strong><br />
+                  Email: <strong>packwaveindustries@gmail.com</strong>
                 </p>
               </div>
             )}
