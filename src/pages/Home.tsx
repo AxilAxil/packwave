@@ -70,7 +70,17 @@ const Home = () => {
               <div ref={contactInfoRef} className="mt-4 p-3 bg-gray-50 rounded-lg">
                 <p className="text-sm text-gray-700">
                   Contact: <strong>Axil Patel</strong><br />
-                  Phone: <strong>+91 7202031313</strong><br />
+                  Phone: <strong>+91 7202031313</strong>
+                </p>
+                <a 
+                  href="https://wa.me/917202031313" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 text-[#25D366] hover:underline text-sm font-medium mt-2"
+                >
+                  💬 Chat on WhatsApp
+                </a>
+                <p className="text-sm text-gray-700 mt-1">
                   Email: <strong>packwaveindustries@gmail.com</strong>
                 </p>
               </div>
