@@ -89,10 +89,10 @@ const Contact = () => {
                 href="tel:+917202031313"
                 className="flex items-center gap-4 p-4 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors"
               >
-                <div className="w-10 h-10 bg-[#1a365d] rounded-full flex items-center justify-center">
+                <div className="w-10 h-10 min-w-[40px] bg-[#1a365d] rounded-full flex items-center justify-center shrink-0">
                   <Phone className="w-5 h-5 text-white" />
                 </div>
-                <div>
+                <div className="min-w-0">
                   <p className="text-sm text-gray-500">Call Us</p>
                   <p className="font-medium text-gray-800">+91 7202031313</p>
                 </div>
@@ -104,10 +104,10 @@ const Contact = () => {
                 rel="noopener noreferrer"
                 className="flex items-center gap-4 p-4 bg-green-50 rounded-lg hover:bg-green-100 transition-colors"
               >
-                <div className="w-10 h-10 bg-[#25D366] rounded-full flex items-center justify-center">
+                <div className="w-10 h-10 min-w-[40px] bg-[#25D366] rounded-full flex items-center justify-center shrink-0">
                   <MessageCircle className="w-5 h-5 text-white" />
                 </div>
-                <div>
+                <div className="min-w-0">
                   <p className="text-sm text-gray-500">WhatsApp</p>
                   <p className="font-medium text-[#25D366]">Chat Now</p>
                 </div>
@@ -115,24 +115,24 @@ const Contact = () => {
               
               <a 
                 href="mailto:packwaveindustries@gmail.com"
-                className="flex items-center gap-4 p-4 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors"
+                className="flex items-center gap-4 p-4 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors sm:col-span-2"
               >
-                <div className="w-10 h-10 bg-[#f97316] rounded-full flex items-center justify-center">
+                <div className="w-10 h-10 min-w-[40px] bg-[#f97316] rounded-full flex items-center justify-center shrink-0">
                   <Mail className="w-5 h-5 text-white" />
                 </div>
-                <div>
+                <div className="min-w-0">
                   <p className="text-sm text-gray-500">Email</p>
-                  <p className="font-medium text-gray-800 text-sm">packwaveindustries@gmail.com</p>
+                  <p className="font-medium text-gray-800 truncate">packwaveindustries@gmail.com</p>
                 </div>
               </a>
               
-              <div className="flex items-center gap-4 p-4 bg-gray-50 rounded-lg">
-                <div className="w-10 h-10 bg-[#1a365d] rounded-full flex items-center justify-center">
+              <div className="flex items-center gap-4 p-4 bg-gray-50 rounded-lg sm:col-span-2">
+                <div className="w-10 h-10 min-w-[40px] bg-[#1a365d] rounded-full flex items-center justify-center shrink-0">
                   <MapPin className="w-5 h-5 text-white" />
                 </div>
-                <div>
+                <div className="min-w-0">
                   <p className="text-sm text-gray-500">Location</p>
-                  <p className="font-medium text-gray-800 text-sm">Surat, Gujarat</p>
+                  <p className="font-medium text-gray-800">Surat, Gujarat</p>
                 </div>
               </div>
             </div>
