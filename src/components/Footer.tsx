@@ -1,4 +1,4 @@
-import { Copyright, Facebook, Instagram, Linkedin, Mail, Phone, Twitter } from "lucide-react";
+import { Copyright, Facebook, Instagram, Linkedin, Mail, Phone, Twitter, MessageCircle } from "lucide-react";
 import { Link } from "react-router-dom";
 
 const Footer = () => {
@@ -27,6 +27,16 @@ const Footer = () => {
             <ul className="space-y-2">
               <li className="flex items-center gap-2 text-gray-300">
                 <Phone size={16} /> +91 7202031313 (Axil Patel)
+              </li>
+              <li>
+                <a 
+                  href="https://wa.me/917202031313" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-2 text-gray-300 hover:text-[#25D366]"
+                >
+                  <MessageCircle size={16} /> Chat on WhatsApp
+                </a>
               </li>
               <li className="flex items-center gap-2 text-gray-300">
                 <Mail size={16} /> packwaveindustries@gmail.com
