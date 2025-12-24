@@ -7,11 +7,20 @@ const Contact = () => {
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+    const formData = new FormData(e.currentTarget);
+    const name = formData.get('name') as string;
+    const phone = formData.get('phone') as string;
+    const email = formData.get('email') as string;
+    const message = formData.get('message') as string;
+    
+    const whatsappMessage = `*New Contact Form Submission*%0A%0A*Name:* ${encodeURIComponent(name)}%0A*Phone:* ${encodeURIComponent(phone)}%0A*Email:* ${encodeURIComponent(email)}%0A%0A*Message:*%0A${encodeURIComponent(message)}`;
+    
+    window.open(`https://wa.me/917202031313?text=${whatsappMessage}`, '_blank');
+    
     toast({
-      title: "Message Sent",
-      description: "We'll get back to you soon!",
+      title: "Opening WhatsApp",
+      description: "Complete sending the message in WhatsApp.",
     });
-    // Form will be connected to email service later
   };
 
   return (
@@ -28,6 +37,7 @@ const Contact = () => {
                 </label>
                 <input
                   required
+                  name="name"
                   type="text"
                   className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#f97316]"
                   placeholder="John Doe"
@@ -40,6 +50,7 @@ const Contact = () => {
                 </label>
                 <input
                   required
+                  name="phone"
                   type="tel"
                   className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#f97316]"
                   placeholder="(555) 123-4567"
@@ -52,6 +63,7 @@ const Contact = () => {
                 </label>
                 <input
                   required
+                  name="email"
                   type="email"
                   className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#f97316]"
                   placeholder="john@example.com"
@@ -64,6 +76,7 @@ const Contact = () => {
                 </label>
                 <textarea
                   required
+                  name="message"
                   className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#f97316] h-32"
                   placeholder="Please describe how we can help you..."
                 />
