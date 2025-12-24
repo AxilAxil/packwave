@@ -1,6 +1,6 @@
-
 import { Button } from "@/components/ui/button";
 import { useToast } from "@/hooks/use-toast";
+import { Phone, MessageCircle, Mail, MapPin } from "lucide-react";
 
 const Contact = () => {
   const { toast } = useToast();
@@ -78,42 +78,62 @@ const Contact = () => {
             </form>
           </div>
           
-          <div className="space-y-8">
+          <div className="space-y-6">
             <div>
-              <h2 className="text-2xl font-semibold text-[#1a365d] mb-3">Get In Touch</h2>
-              <p className="text-gray-600">
-                Have questions? Fill out the form or contact us directly.
-              </p>
+              <h2 className="text-2xl font-semibold text-[#1a365d] mb-2">Get In Touch</h2>
+              <p className="text-gray-600 text-sm">Have questions? Contact us directly.</p>
             </div>
             
-            <div className="space-y-4">
-              <div className="flex items-center gap-3">
-                <span className="text-gray-500">👤</span>
-                <span className="text-gray-700 font-medium">Axil Patel</span>
-              </div>
-              
-              <div className="flex items-center gap-3">
-                <span className="text-gray-500">📞</span>
-                <a href="tel:+917202031313" className="text-gray-700 hover:text-[#f97316]">+91 7202031313</a>
-              </div>
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <a 
+                href="tel:+917202031313"
+                className="flex items-center gap-4 p-4 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors"
+              >
+                <div className="w-10 h-10 bg-[#1a365d] rounded-full flex items-center justify-center">
+                  <Phone className="w-5 h-5 text-white" />
+                </div>
+                <div>
+                  <p className="text-sm text-gray-500">Call Us</p>
+                  <p className="font-medium text-gray-800">+91 7202031313</p>
+                </div>
+              </a>
               
               <a 
                 href="https://wa.me/917202031313" 
                 target="_blank" 
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-3 text-[#25D366] hover:underline font-medium"
+                className="flex items-center gap-4 p-4 bg-green-50 rounded-lg hover:bg-green-100 transition-colors"
               >
-                <span>💬</span> Chat on WhatsApp
+                <div className="w-10 h-10 bg-[#25D366] rounded-full flex items-center justify-center">
+                  <MessageCircle className="w-5 h-5 text-white" />
+                </div>
+                <div>
+                  <p className="text-sm text-gray-500">WhatsApp</p>
+                  <p className="font-medium text-[#25D366]">Chat Now</p>
+                </div>
               </a>
               
-              <div className="flex items-center gap-3">
-                <span className="text-gray-500">✉️</span>
-                <a href="mailto:packwaveindustries@gmail.com" className="text-gray-700 hover:text-[#f97316]">packwaveindustries@gmail.com</a>
-              </div>
+              <a 
+                href="mailto:packwaveindustries@gmail.com"
+                className="flex items-center gap-4 p-4 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors"
+              >
+                <div className="w-10 h-10 bg-[#f97316] rounded-full flex items-center justify-center">
+                  <Mail className="w-5 h-5 text-white" />
+                </div>
+                <div>
+                  <p className="text-sm text-gray-500">Email</p>
+                  <p className="font-medium text-gray-800 text-sm">packwaveindustries@gmail.com</p>
+                </div>
+              </a>
               
-              <div className="flex items-start gap-3">
-                <span className="text-gray-500 mt-1">📍</span>
-                <span className="text-gray-700">Plot No: 24-28, Arya Industrial-4, Olpad Sayan Road, Surat - 394540</span>
+              <div className="flex items-center gap-4 p-4 bg-gray-50 rounded-lg">
+                <div className="w-10 h-10 bg-[#1a365d] rounded-full flex items-center justify-center">
+                  <MapPin className="w-5 h-5 text-white" />
+                </div>
+                <div>
+                  <p className="text-sm text-gray-500">Location</p>
+                  <p className="font-medium text-gray-800 text-sm">Surat, Gujarat</p>
+                </div>
               </div>
             </div>
             

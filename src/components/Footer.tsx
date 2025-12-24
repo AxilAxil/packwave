@@ -23,23 +23,27 @@ const Footer = () => {
           </div>
           
           <div>
-            <h3 className="text-xl font-semibold mb-4">Contact Info</h3>
-            <ul className="space-y-2">
-              <li className="flex items-center gap-2 text-gray-300">
-                <Phone size={16} /> +91 7202031313 (Axil Patel)
+            <h3 className="text-xl font-semibold mb-4">Contact</h3>
+            <ul className="space-y-3">
+              <li>
+                <a href="tel:+917202031313" className="flex items-center gap-2 text-gray-300 hover:text-[#f97316]">
+                  <Phone size={16} /> +91 7202031313
+                </a>
               </li>
               <li>
                 <a 
                   href="https://wa.me/917202031313" 
                   target="_blank" 
                   rel="noopener noreferrer"
-                  className="flex items-center gap-2 text-gray-300 hover:text-[#25D366]"
+                  className="flex items-center gap-2 text-[#25D366] hover:text-[#20ba5a]"
                 >
-                  <MessageCircle size={16} /> Chat on WhatsApp
+                  <MessageCircle size={16} /> WhatsApp
                 </a>
               </li>
-              <li className="flex items-center gap-2 text-gray-300">
-                <Mail size={16} /> packwaveindustries@gmail.com
+              <li>
+                <a href="mailto:packwaveindustries@gmail.com" className="flex items-center gap-2 text-gray-300 hover:text-[#f97316]">
+                  <Mail size={16} /> Email Us
+                </a>
               </li>
             </ul>
           </div>
