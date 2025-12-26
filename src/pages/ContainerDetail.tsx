@@ -2,6 +2,7 @@ import { useParams } from 'react-router-dom';
 import { Button } from "@/components/ui/button";
 import { useToast } from "@/hooks/use-toast";
 import { ShoppingCart, Heart, Phone } from 'lucide-react';
+import { publicUrl } from "@/lib/publicUrl";
 
 const ContainerDetail = () => {
   const { id } = useParams();
@@ -11,7 +12,7 @@ const ContainerDetail = () => {
     1: {
       name: "Regular Slotted Container",
       description: "Standard box with top and bottom flaps that meet in the middle",
-      image: "/lovable-uploads/7f1a93cc-3283-4c06-858b-63cddf0c8cf7.png",
+      image: publicUrl("lovable-uploads/7f1a93cc-3283-4c06-858b-63cddf0c8cf7.png"),
       features: [
         "Most common box style",
         "Economical and versatile", 
@@ -27,7 +28,7 @@ const ContainerDetail = () => {
     2: {
       name: "Half Slotted Container",
       description: "Similar to RSC but with no top flaps",
-      image: "/lovable-uploads/9f7341c4-75a6-4766-a89d-b3cd3017c38a.png",
+      image: publicUrl("lovable-uploads/9f7341c4-75a6-4766-a89d-b3cd3017c38a.png"),
       features: [
         "Open top design",
         "Perfect for display purposes",
@@ -43,7 +44,7 @@ const ContainerDetail = () => {
     3: {
       name: "Full Overlap Container", 
       description: "Box with top and bottom flaps that completely overlap",
-      image: "/lovable-uploads/c8eb6e7a-8190-4e9b-b63b-e7029672302f.png",
+      image: publicUrl("lovable-uploads/c8eb6e7a-8190-4e9b-b63b-e7029672302f.png"),
       features: [
         "Maximum stacking strength",
         "Extra protection",
@@ -59,7 +60,7 @@ const ContainerDetail = () => {
     4: {
       name: "Custom Design",
       description: "Tailored to your specific requirements", 
-      image: "/lovable-uploads/b20d83b7-0f28-45c6-83a2-2ab2f2b819a6.png",
+      image: publicUrl("lovable-uploads/b20d83b7-0f28-45c6-83a2-2ab2f2b819a6.png"),
       features: [
         "Fully customizable",
         "Unique specifications",

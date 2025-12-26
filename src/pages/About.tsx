@@ -1,4 +1,3 @@
-
 const About = () => {
   return (
     <div className="min-h-screen pt-16 pb-10 bg-background">
@@ -21,7 +20,7 @@ const About = () => {
           
           <div className="rounded-lg h-48 sm:h-64 overflow-hidden">
             <img 
-              src="/lovable-uploads/c8eb6e7a-8190-4e9b-b63b-e7029672302f.png" 
+              src={`${import.meta.env.BASE_URL}lovable-uploads/c8eb6e7a-8190-4e9b-b63b-e7029672302f.png`} 
               alt="PackWave Industries - Our Team" 
               className="w-full h-full object-cover rounded-lg"
             />
