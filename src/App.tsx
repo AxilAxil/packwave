@@ -20,7 +20,7 @@ const App = () => (
     <TooltipProvider>
       <Toaster />
       <Sonner />
-      <BrowserRouter basename="/packwave/">
+      <BrowserRouter basename={import.meta.env.BASE_URL}>
         <div className="min-h-screen bg-white flex flex-col">
           <Navbar />
           <div className="flex-grow">
