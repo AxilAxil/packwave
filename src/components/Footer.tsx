@@ -1,4 +1,4 @@
-import { Copyright, Facebook, Instagram, Linkedin, Mail, Phone, Twitter, MessageCircle } from "lucide-react";
+import { Copyright, Facebook, Instagram, Linkedin, Mail, Phone, MessageCircle } from "lucide-react";
 import { Link } from "react-router-dom";
 
 const Footer = () => {
@@ -53,9 +53,6 @@ const Footer = () => {
             <div className="flex space-x-4">
               <a href="#" className="text-gray-300 hover:text-[#f97316]">
                 <Facebook size={20} />
-              </a>
-              <a href="#" className="text-gray-300 hover:text-[#f97316]">
-                <Twitter size={20} />
               </a>
               <a href="#" className="text-gray-300 hover:text-[#f97316]">
                 <Instagram size={20} />
