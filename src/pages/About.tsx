@@ -19,8 +19,12 @@ const About = () => {
             </p>
           </div>
           
-          <div className="bg-muted rounded-lg h-48 sm:h-64 flex items-center justify-center">
-            <span className="text-muted-foreground text-sm sm:text-base">Company Image Placeholder</span>
+          <div className="rounded-lg h-48 sm:h-64 overflow-hidden">
+            <img 
+              src="/lovable-uploads/c8eb6e7a-8190-4e9b-b63b-e7029672302f.png" 
+              alt="PackWave Industries - Our Team" 
+              className="w-full h-full object-cover rounded-lg"
+            />
           </div>
           
           <div className="lg:col-span-2 mt-4 sm:mt-8">
