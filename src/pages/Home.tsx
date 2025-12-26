@@ -67,7 +67,7 @@ const Home = () => {
               {showContactInfo[0] ? "Call to Order" : "Order now"}
             </Button>
             {showContactInfo[0] && (
-              <div ref={contactInfoRef} className="mt-4 p-3 sm:p-4 bg-secondary rounded-lg">
+              <div ref={contactInfoRef} className="mt-4 p-3 sm:p-4 bg-card border border-border rounded-lg shadow-sm">
                 <p className="text-sm text-foreground">
                   Contact: <strong>Axil Patel</strong><br />
                   Phone: <strong>+91 7202031313</strong>
@@ -76,9 +76,9 @@ const Home = () => {
                   href="https://wa.me/917202031313" 
                   target="_blank" 
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 text-[#25D366] hover:underline text-sm font-medium mt-2"
+                  className="inline-flex items-center gap-2 text-[#25D366] hover:text-[#1da851] text-sm font-medium mt-2"
                 >
-                  💬 Chat on WhatsApp
+                  <span className="text-[#25D366]">💬</span> Chat on WhatsApp
                 </a>
                 <p className="text-sm text-foreground mt-1">
                   Email: <strong>packwaveindustries@gmail.com</strong>
