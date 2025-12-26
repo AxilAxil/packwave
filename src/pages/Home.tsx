@@ -52,7 +52,7 @@ const Home = () => {
   return (
     <div className="min-h-screen pt-16 bg-background">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex flex-col md:flex-row items-center justify-between py-10 sm:py-16 lg:py-20 gap-8">
+        <div className="flex flex-col md:flex-row md:items-start justify-between py-10 sm:py-16 lg:py-20 gap-8">
           <div className="w-full md:w-1/2">
             <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-foreground mb-4 sm:mb-6">
               Custom Packaging Solutions for Your Business
@@ -86,7 +86,7 @@ const Home = () => {
               </div>
             )}
           </div>
-          <div className="w-full md:w-1/2">
+          <div className="w-full md:w-1/2 md:self-start">
             <img 
               src="/lovable-uploads/c8eb6e7a-8190-4e9b-b63b-e7029672302f.png" 
               alt="Packaging Solutions" 
