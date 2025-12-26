@@ -102,8 +102,8 @@ const Contact = () => {
                 href="mailto:packwaveindustries@gmail.com"
                 className="flex items-center gap-3 sm:gap-4 p-3 sm:p-4 bg-secondary rounded-lg hover:bg-muted transition-colors sm:col-span-2"
               >
-                <div className="w-9 h-9 sm:w-10 sm:h-10 min-w-[36px] sm:min-w-[40px] bg-accent rounded-full flex items-center justify-center shrink-0">
-                  <Mail className="w-4 h-4 sm:w-5 sm:h-5 text-accent-foreground" />
+                <div className="w-9 h-9 sm:w-10 sm:h-10 min-w-[36px] sm:min-w-[40px] bg-primary rounded-full flex items-center justify-center shrink-0">
+                  <Mail className="w-4 h-4 sm:w-5 sm:h-5 text-primary-foreground" />
                 </div>
                 <div className="min-w-0">
                   <p className="text-xs sm:text-sm text-muted-foreground">Email</p>
