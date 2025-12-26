@@ -72,6 +72,9 @@ const Home = () => {
                   Contact: <strong>Axil Patel</strong><br />
                   Phone: <strong>+91 7202031313</strong>
                 </p>
+                <p className="text-sm text-foreground mt-1">
+                  Email: <strong>packwaveindustries@gmail.com</strong>
+                </p>
                 <a 
                   href="https://wa.me/917202031313" 
                   target="_blank" 
@@ -80,9 +83,6 @@ const Home = () => {
                 >
                   <span className="text-[#25D366]">💬</span> Chat on WhatsApp
                 </a>
-                <p className="text-sm text-foreground mt-1">
-                  Email: <strong>packwaveindustries@gmail.com</strong>
-                </p>
               </div>
             )}
           </div>
