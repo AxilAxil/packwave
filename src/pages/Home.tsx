@@ -1,6 +1,11 @@
 import { Button } from "@/components/ui/button";
 import { useState, useRef, useEffect } from "react";
-import { publicUrl } from "@/lib/publicUrl";
+
+// Import images as ES6 modules
+import regularSlottedImg from "@/assets/regular-slotted-container.png";
+import halfSlottedImg from "@/assets/half-slotted-container.png";
+import fullOverlapImg from "@/assets/full-overlap-container.png";
+import customDesignImg from "@/assets/custom-design.png";
 
 const Home = () => {
   const [showContactInfo, setShowContactInfo] = useState<{ [key: number]: boolean }>({});
@@ -27,25 +32,25 @@ const Home = () => {
       id: 1,
       name: "Regular Slotted Container",
       description: "Standard box with top and bottom flaps that meet in the middle",
-      image: publicUrl("lovable-uploads/7f1a93cc-3283-4c06-858b-63cddf0c8cf7.png")
+      image: regularSlottedImg
     },
     {
       id: 2,
       name: "Half Slotted Container",
       description: "Similar to RSC but with no top flaps",
-      image: publicUrl("lovable-uploads/9f7341c4-75a6-4766-a89d-b3cd3017c38a.png")
+      image: halfSlottedImg
     },
     {
       id: 3,
       name: "Full Overlap Container",
       description: "Box with top and bottom flaps that completely overlap",
-      image: publicUrl("lovable-uploads/c8eb6e7a-8190-4e9b-b63b-e7029672302f.png")
+      image: fullOverlapImg
     },
     {
       id: 4,
       name: "Custom Design",
       description: "Tailored to your specific requirements",
-      image: publicUrl("lovable-uploads/b20d83b7-0f28-45c6-83a2-2ab2f2b819a6.png")
+      image: customDesignImg
     },
   ];
 
@@ -88,7 +93,7 @@ const Home = () => {
           </div>
           <div className="w-full md:w-1/2 md:self-start">
             <img 
-              src={publicUrl("lovable-uploads/c8eb6e7a-8190-4e9b-b63b-e7029672302f.png")} 
+              src={fullOverlapImg} 
               alt="Packaging Solutions" 
               className="rounded-lg w-full h-64 sm:h-80 lg:h-96 object-cover"
             />
