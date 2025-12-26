@@ -142,7 +142,7 @@ const ContainerDetail = () => {
               
               <div className="flex space-x-4">
                 <Button 
-                  className="bg-[#f97316] hover:text-[#f97316] hover:bg-white border-2 border-[#f97316] text-lg"
+                  className="bg-accent hover:bg-primary text-accent-foreground hover:text-primary-foreground"
                   onClick={handleCallToOrder}
                 >
                   <Phone className="mr-2" />
@@ -151,7 +151,7 @@ const ContainerDetail = () => {
                 <Button
                   variant="outline"
                   onClick={handleAddToFavorites}
-                  className="border-2 border-[#f97316] text-[#f97316] hover:bg-[#f97316] hover:text-white"
+                  className="border-2 border-accent text-accent hover:bg-accent hover:text-accent-foreground"
                 >
                   <Heart className="mr-2" />
                   Add to Favorites
