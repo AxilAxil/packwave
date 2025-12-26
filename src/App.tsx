@@ -20,7 +20,7 @@ const App = () => (
     <TooltipProvider>
       <Toaster />
       <Sonner />
-      <BrowserRouter>
+      <BrowserRouter basename="/packwave/">
         <div className="min-h-screen bg-white flex flex-col">
           <Navbar />
           <div className="flex-grow">
