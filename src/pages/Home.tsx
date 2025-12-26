@@ -52,22 +52,22 @@ const Home = () => {
   return (
     <div className="min-h-screen pt-16 bg-background">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex flex-col md:flex-row items-center justify-between py-20">
-          <div className="md:w-1/2 mb-10 md:mb-0">
-            <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
+        <div className="flex flex-col md:flex-row items-center justify-between py-10 sm:py-16 lg:py-20 gap-8">
+          <div className="w-full md:w-1/2">
+            <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-foreground mb-4 sm:mb-6">
               Custom Packaging Solutions for Your Business
             </h1>
-            <p className="text-lg text-muted-foreground mb-8">
+            <p className="text-base sm:text-lg text-muted-foreground mb-6 sm:mb-8">
               PackWave specializes in manufacturing high-quality corrugated boxes tailored to your specific needs. Transform your packaging experience with our innovative solutions.
             </p>
             <Button 
-              className="bg-accent hover:bg-primary text-accent-foreground hover:text-primary-foreground px-8 py-6 text-lg"
+              className="bg-accent hover:bg-primary text-accent-foreground hover:text-primary-foreground px-6 sm:px-8 py-5 sm:py-6 text-base sm:text-lg w-full sm:w-auto"
               onClick={() => setShowContactInfo(prev => ({ ...prev, [0]: !prev[0] }))}
             >
               {showContactInfo[0] ? "Call to Order" : "Order now"}
             </Button>
             {showContactInfo[0] && (
-              <div ref={contactInfoRef} className="mt-4 p-3 bg-secondary rounded-lg">
+              <div ref={contactInfoRef} className="mt-4 p-3 sm:p-4 bg-secondary rounded-lg">
                 <p className="text-sm text-foreground">
                   Contact: <strong>Axil Patel</strong><br />
                   Phone: <strong>+91 7202031313</strong>
@@ -86,35 +86,35 @@ const Home = () => {
               </div>
             )}
           </div>
-          <div className="md:w-1/2">
+          <div className="w-full md:w-1/2">
             <img 
               src="/lovable-uploads/c8eb6e7a-8190-4e9b-b63b-e7029672302f.png" 
               alt="Packaging Solutions" 
-              className="rounded-lg w-full h-96 object-cover"
+              className="rounded-lg w-full h-64 sm:h-80 lg:h-96 object-cover"
             />
           </div>
         </div>
 
         {/* Container Types Section */}
-        <div className="py-20 bg-secondary rounded-2xl -mx-4 px-4 sm:-mx-6 sm:px-6 lg:-mx-8 lg:px-8">
+        <div className="py-10 sm:py-16 lg:py-20 bg-secondary rounded-2xl -mx-4 px-4 sm:-mx-6 sm:px-6 lg:-mx-8 lg:px-8 mb-8">
           <div className="max-w-7xl mx-auto">
-            <h2 className="text-3xl font-bold text-foreground text-center mb-12">Our Container Types</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 items-start">
+            <h2 className="text-2xl sm:text-3xl font-bold text-foreground text-center mb-8 sm:mb-12">Our Container Types</h2>
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 items-start">
               {containerTypes.map((type) => (
                 <div 
                   key={type.id}
                   data-container-card
-                  className="bg-card border-2 border-border rounded-lg p-4 hover:border-accent transition-colors h-80 flex flex-col"
+                  className="bg-card border-2 border-border rounded-lg p-4 hover:border-accent transition-colors min-h-[280px] sm:min-h-[300px] flex flex-col"
                 >
-                  <div className="h-40 overflow-hidden rounded-lg mb-4">
+                  <div className="h-32 sm:h-40 overflow-hidden rounded-lg mb-4">
                     <img 
                       src={type.image} 
                       alt={type.name}
                       className="w-full h-full object-cover"
                     />
                   </div>
-                  <h3 className="font-medium text-center mb-2 text-foreground">{type.name}</h3>
-                  <p className="text-muted-foreground text-sm">{type.description}</p>
+                  <h3 className="font-medium text-center mb-2 text-foreground text-sm sm:text-base">{type.name}</h3>
+                  <p className="text-muted-foreground text-xs sm:text-sm">{type.description}</p>
                 </div>
               ))}
             </div>
