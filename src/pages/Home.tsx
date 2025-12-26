@@ -50,25 +50,25 @@ const Home = () => {
   ];
 
   return (
-    <div className="min-h-screen pt-16">
+    <div className="min-h-screen pt-16 bg-background">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col md:flex-row items-center justify-between py-20">
           <div className="md:w-1/2 mb-10 md:mb-0">
-            <h1 className="text-4xl md:text-5xl font-bold text-[#1a365d] mb-6">
+            <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
               Custom Packaging Solutions for Your Business
             </h1>
-            <p className="text-lg text-gray-600 mb-8">
+            <p className="text-lg text-muted-foreground mb-8">
               PackWave specializes in manufacturing high-quality corrugated boxes tailored to your specific needs. Transform your packaging experience with our innovative solutions.
             </p>
             <Button 
-              className="bg-[#f97316] hover:text-white hover:bg-[#1a365d] text-white px-8 py-6 text-lg"
+              className="bg-accent hover:bg-primary text-accent-foreground hover:text-primary-foreground px-8 py-6 text-lg"
               onClick={() => setShowContactInfo(prev => ({ ...prev, [0]: !prev[0] }))}
             >
               {showContactInfo[0] ? "Call to Order" : "Order now"}
             </Button>
             {showContactInfo[0] && (
-              <div ref={contactInfoRef} className="mt-4 p-3 bg-gray-50 rounded-lg">
-                <p className="text-sm text-gray-700">
+              <div ref={contactInfoRef} className="mt-4 p-3 bg-secondary rounded-lg">
+                <p className="text-sm text-foreground">
                   Contact: <strong>Axil Patel</strong><br />
                   Phone: <strong>+91 7202031313</strong>
                 </p>
@@ -80,7 +80,7 @@ const Home = () => {
                 >
                   💬 Chat on WhatsApp
                 </a>
-                <p className="text-sm text-gray-700 mt-1">
+                <p className="text-sm text-foreground mt-1">
                   Email: <strong>packwaveindustries@gmail.com</strong>
                 </p>
               </div>
@@ -96,15 +96,15 @@ const Home = () => {
         </div>
 
         {/* Container Types Section */}
-        <div className="py-20 bg-gray-50">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 className="text-3xl font-bold text-[#1a365d] text-center mb-12">Our Container Types</h2>
+        <div className="py-20 bg-secondary rounded-2xl -mx-4 px-4 sm:-mx-6 sm:px-6 lg:-mx-8 lg:px-8">
+          <div className="max-w-7xl mx-auto">
+            <h2 className="text-3xl font-bold text-foreground text-center mb-12">Our Container Types</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 items-start">
               {containerTypes.map((type) => (
                 <div 
                   key={type.id}
                   data-container-card
-                  className="bg-white border-2 border-gray-200 rounded-lg p-4 hover:border-gray-300 transition-colors h-80 flex flex-col"
+                  className="bg-card border-2 border-border rounded-lg p-4 hover:border-accent transition-colors h-80 flex flex-col"
                 >
                   <div className="h-40 overflow-hidden rounded-lg mb-4">
                     <img 
@@ -113,8 +113,8 @@ const Home = () => {
                       className="w-full h-full object-cover"
                     />
                   </div>
-                  <h3 className="font-medium text-center mb-2">{type.name}</h3>
-                  <p className="text-gray-600 text-sm">{type.description}</p>
+                  <h3 className="font-medium text-center mb-2 text-foreground">{type.name}</h3>
+                  <p className="text-muted-foreground text-sm">{type.description}</p>
                 </div>
               ))}
             </div>

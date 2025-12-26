@@ -3,19 +3,19 @@ import { Button } from "@/components/ui/button";
 
 const Navbar = () => {
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-white border-b border-gray-200">
+    <nav className="fixed top-0 left-0 right-0 z-50 bg-card border-b border-border">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           <div className="flex-shrink-0">
             <Link to="/" className="flex items-center">
-              <span className="text-2xl font-bold text-[#1a365d]">PackWave</span>
+              <span className="text-2xl font-bold text-foreground">PackWave</span>
             </Link>
           </div>
           
           <div className="hidden sm:flex sm:items-center sm:space-x-8">
-            <Link to="/" className="text-gray-600 hover:text-[#f97316]">Home</Link>
-            <Link to="/about" className="text-gray-600 hover:text-[#f97316]">About</Link>
-            <Link to="/contact" className="text-gray-600 hover:text-[#f97316]">Contact Us</Link>
+            <Link to="/" className="text-muted-foreground hover:text-accent">Home</Link>
+            <Link to="/about" className="text-muted-foreground hover:text-accent">About</Link>
+            <Link to="/contact" className="text-muted-foreground hover:text-accent">Contact Us</Link>
           </div>
           
           <div className="sm:hidden">
