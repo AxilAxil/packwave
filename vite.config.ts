@@ -5,8 +5,8 @@ import { componentTagger } from "lovable-tagger";
 
 // https://vitejs.dev/config/
 export default defineConfig(({ command, mode }) => ({
-  // Use / during local dev/preview, and the repository subpath only for production builds.
-  base: command === "build" ? "/packwave/" : "/",
+  // Use / for custom domain hosting
+  base: "/",
   server: {
     host: "::",
     port: 8080,
