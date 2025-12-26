@@ -1,4 +1,4 @@
-import { publicUrl } from "@/lib/publicUrl";
+import fullOverlapImg from "@/assets/full-overlap-container.png";
 
 const About = () => {
   return (
@@ -22,7 +22,7 @@ const About = () => {
 
           <div className="rounded-lg h-48 sm:h-64 overflow-hidden">
             <img
-              src={publicUrl("lovable-uploads/c8eb6e7a-8190-4e9b-b63b-e7029672302f.png")}
+              src={fullOverlapImg}
               alt="PackWave Industries - Our Team"
               loading="lazy"
               decoding="async"
@@ -39,14 +39,14 @@ const About = () => {
                   We believe in honest work, transparency, and keeping our commitments. Trust is at the core of everything we do.
                 </p>
               </div>
-              
+
               <div className="bg-card p-4 sm:p-6 rounded-lg shadow-md border border-border">
                 <h3 className="text-lg sm:text-xl font-medium text-accent mb-2">Customer & People First</h3>
                 <p className="text-muted-foreground text-sm sm:text-base">
                   We care deeply about our customers and our employees. Building long-term relationships and treating people with respect guides every decision.
                 </p>
               </div>
-              
+
               <div className="bg-card p-4 sm:p-6 rounded-lg shadow-md border border-border sm:col-span-2 lg:col-span-1">
                 <h3 className="text-lg sm:text-xl font-medium text-accent mb-2">Hard Work & Quality</h3>
                 <p className="text-muted-foreground text-sm sm:text-base">
