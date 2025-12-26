@@ -26,6 +26,11 @@ const Footer = () => {
             <h3 className="text-lg sm:text-xl font-semibold mb-3 sm:mb-4">Contact</h3>
             <ul className="space-y-2 sm:space-y-3">
               <li>
+                <a href="mailto:packwaveindustries@gmail.com" className="flex items-center gap-2 text-background/70 hover:text-accent transition-colors text-sm sm:text-base">
+                  <Mail size={16} className="shrink-0" /> Email Us
+                </a>
+              </li>
+              <li>
                 <a href="tel:+917202031313" className="flex items-center gap-2 text-background/70 hover:text-accent transition-colors text-sm sm:text-base">
                   <Phone size={16} className="shrink-0" /> +91 7202031313
                 </a>
@@ -38,11 +43,6 @@ const Footer = () => {
                   className="flex items-center gap-2 text-[#25D366] hover:text-[#20ba5a] transition-colors text-sm sm:text-base"
                 >
                   <MessageCircle size={16} className="shrink-0" /> WhatsApp
-                </a>
-              </li>
-              <li>
-                <a href="mailto:packwaveindustries@gmail.com" className="flex items-center gap-2 text-background/70 hover:text-accent transition-colors text-sm sm:text-base">
-                  <Mail size={16} className="shrink-0" /> Email Us
                 </a>
               </li>
             </ul>
