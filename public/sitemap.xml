@@ -1,15 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"
         xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 
         http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
   
-  <!-- Homepage -->
+  <!-- Homepage - Corrugated Box Manufacturer -->
   <url>
     <loc>https://packwaveindustries.com/</loc>
     <lastmod>2025-01-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://packwaveindustries.com/og-image.png</image:loc>
+      <image:title>PackWave Industries - Corrugated Box Manufacturer Gujarat India</image:title>
+    </image:image>
   </url>
   
   <!-- About Page -->
@@ -28,41 +33,36 @@
     <priority>0.9</priority>
   </url>
   
-  <!-- Container Detail Pages -->
+  <!-- Regular Slotted Container (RSC) -->
   <url>
     <loc>https://packwaveindustries.com/container/1</loc>
     <lastmod>2025-01-01</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.8</priority>
   </url>
   
+  <!-- Half Slotted Container -->
   <url>
     <loc>https://packwaveindustries.com/container/2</loc>
     <lastmod>2025-01-01</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.8</priority>
   </url>
   
+  <!-- Full Overlap Container -->
   <url>
     <loc>https://packwaveindustries.com/container/3</loc>
     <lastmod>2025-01-01</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.8</priority>
   </url>
   
+  <!-- Custom Design Boxes -->
   <url>
     <loc>https://packwaveindustries.com/container/4</loc>
     <lastmod>2025-01-01</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  
-  <!-- Favorites Page -->
-  <url>
-    <loc>https://packwaveindustries.com/favorites</loc>
-    <lastmod>2025-01-01</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
+    <priority>0.8</priority>
   </url>
   
 </urlset>
