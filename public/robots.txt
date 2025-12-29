@@ -1,14 +1,42 @@
-# PackWave Industries - robots.txt
+# PackWave Industries - Corrugated Box Manufacturer
 # https://packwaveindustries.com
 
+User-agent: *
+Allow: /
+
+# Google
 User-agent: Googlebot
 Allow: /
-Crawl-delay: 1
+Crawl-delay: 0
 
+User-agent: Googlebot-Image
+Allow: /
+
+# Bing
 User-agent: Bingbot
 Allow: /
 Crawl-delay: 1
 
+User-agent: MSNBot
+Allow: /
+
+# Yahoo
+User-agent: Slurp
+Allow: /
+
+# Yandex
+User-agent: Yandex
+Allow: /
+
+# DuckDuckGo
+User-agent: DuckDuckBot
+Allow: /
+
+# Baidu
+User-agent: Baiduspider
+Allow: /
+
+# Social Media Bots
 User-agent: Twitterbot
 Allow: /
 
@@ -21,8 +49,8 @@ Allow: /
 User-agent: WhatsApp
 Allow: /
 
-User-agent: *
-Allow: /
-
-# Sitemap
+# Sitemap location
 Sitemap: https://packwaveindustries.com/sitemap.xml
+
+# Host
+Host: https://packwaveindustries.com

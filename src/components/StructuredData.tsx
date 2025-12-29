@@ -121,31 +121,63 @@ const StructuredData = ({ type, data }: StructuredDataProps) => {
                 "name": "What types of corrugated boxes does PackWave manufacture?",
                 "acceptedAnswer": {
                   "@type": "Answer",
-                  "text": "PackWave manufactures Regular Slotted Containers (RSC), Half Slotted Containers, Full Overlap Containers, and Custom Design boxes tailored to your specific needs."
+                  "text": "PackWave Industries manufactures Regular Slotted Containers (RSC), Half Slotted Containers, Full Overlap Containers, and Custom Design boxes tailored to your specific needs. We offer boxes in various sizes, thicknesses (3-ply, 5-ply, 7-ply), and custom printing options."
                 }
               },
               {
                 "@type": "Question",
-                "name": "How can I order custom packaging from PackWave?",
+                "name": "How can I order custom packaging from PackWave Industries?",
                 "acceptedAnswer": {
                   "@type": "Answer",
-                  "text": "You can order by calling +91-7202031313, emailing packwaveindustries@gmail.com, or chatting with us on WhatsApp for quick assistance."
+                  "text": "You can order custom packaging by calling +91-7202031313, emailing packwaveindustries@gmail.com, or chatting with us on WhatsApp for instant quotes and assistance."
                 }
               },
               {
                 "@type": "Question",
-                "name": "Does PackWave deliver packaging across India?",
+                "name": "Does PackWave deliver packaging boxes across India?",
                 "acceptedAnswer": {
                   "@type": "Answer",
-                  "text": "Yes, PackWave Industries provides packaging solutions and delivery services across India."
+                  "text": "Yes, PackWave Industries provides corrugated box manufacturing and delivery services across Gujarat and all of India with fast turnaround times."
                 }
               },
               {
                 "@type": "Question",
-                "name": "What is the minimum order quantity for custom boxes?",
+                "name": "What is the minimum order quantity for corrugated boxes?",
                 "acceptedAnswer": {
                   "@type": "Answer",
-                  "text": "Minimum order quantities vary based on the type and size of boxes. Contact us for specific requirements and we'll provide a customized quote."
+                  "text": "Minimum order quantities vary based on box type and size. Contact PackWave Industries at +91-7202031313 for specific requirements and customized pricing."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "What are the best corrugated boxes for shipping?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Regular Slotted Containers (RSC) are ideal for general shipping. For heavy items, Full Overlap Containers provide extra strength. PackWave helps you choose the right box for your needs."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Where is PackWave Industries located?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "PackWave Industries is based in Gujarat, India. We serve businesses across India with premium corrugated packaging solutions."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Does PackWave offer custom printed boxes?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Yes, PackWave Industries offers custom printed corrugated boxes with your logo, branding, and design specifications. Contact us for custom packaging solutions."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "What is the price of corrugated boxes in India?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Corrugated box prices vary based on size, thickness, quantity, and customization. Contact PackWave Industries at +91-7202031313 for competitive pricing and free quotes."
                 }
               }
             ],
