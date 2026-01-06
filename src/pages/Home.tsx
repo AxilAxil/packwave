@@ -3,7 +3,12 @@ import { useState, useRef, useEffect } from "react";
 import { Link } from "react-router-dom";
 import SEOHead from "@/components/SEOHead";
 import StructuredData from "@/components/StructuredData";
-
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion";
 // Import images as ES6 modules
 import regularSlottedImg from "@/assets/regular-slotted-container.png";
 import halfSlottedImg from "@/assets/half-slotted-container.png";
@@ -193,6 +198,88 @@ const Home = () => {
                   Quick turnaround times with reliable delivery services. Serving businesses across Gujarat and all of India.
                 </p>
               </article>
+            </div>
+          </section>
+
+          {/* FAQ Section - SEO & AEO Optimized */}
+          <section className="py-10 sm:py-16 lg:py-20 bg-secondary rounded-2xl -mx-4 px-4 sm:-mx-6 sm:px-6 lg:-mx-8 lg:px-8 mb-8" aria-labelledby="faq-heading">
+            <div className="max-w-4xl mx-auto">
+              <h2 id="faq-heading" className="text-2xl sm:text-3xl font-bold text-foreground text-center mb-8 sm:mb-12">
+                Frequently Asked Questions About Corrugated Boxes
+              </h2>
+              <Accordion type="single" collapsible className="w-full space-y-2">
+                <AccordionItem value="item-1" className="bg-card border border-border rounded-lg px-4">
+                  <AccordionTrigger className="text-left text-foreground hover:no-underline">
+                    What types of corrugated boxes does PackWave manufacture?
+                  </AccordionTrigger>
+                  <AccordionContent className="text-muted-foreground">
+                    PackWave Industries manufactures Regular Slotted Containers (RSC), Half Slotted Containers (HSC), Full Overlap Containers (FOL), and custom-designed packaging solutions. We specialize in 3-ply and 5-ply corrugated boxes for various industries including e-commerce, FMCG, and industrial sectors.
+                  </AccordionContent>
+                </AccordionItem>
+
+                <AccordionItem value="item-2" className="bg-card border border-border rounded-lg px-4">
+                  <AccordionTrigger className="text-left text-foreground hover:no-underline">
+                    How can I order custom packaging from PackWave Industries?
+                  </AccordionTrigger>
+                  <AccordionContent className="text-muted-foreground">
+                    You can order custom packaging by calling us at +91 7202031313, emailing packwaveindustries@gmail.com, or messaging us on WhatsApp. Simply share your requirements including dimensions, quantity, and any special printing needs, and we'll provide a free quote within 24 hours.
+                  </AccordionContent>
+                </AccordionItem>
+
+                <AccordionItem value="item-3" className="bg-card border border-border rounded-lg px-4">
+                  <AccordionTrigger className="text-left text-foreground hover:no-underline">
+                    Does PackWave deliver packaging boxes across India?
+                  </AccordionTrigger>
+                  <AccordionContent className="text-muted-foreground">
+                    Yes, PackWave Industries delivers corrugated boxes and packaging solutions across India. We are based in Gujarat and offer fast delivery to all major cities and industrial areas. Bulk orders receive priority shipping with competitive freight rates.
+                  </AccordionContent>
+                </AccordionItem>
+
+                <AccordionItem value="item-4" className="bg-card border border-border rounded-lg px-4">
+                  <AccordionTrigger className="text-left text-foreground hover:no-underline">
+                    What is the minimum order quantity for corrugated boxes?
+                  </AccordionTrigger>
+                  <AccordionContent className="text-muted-foreground">
+                    Our minimum order quantity varies based on box size and customization requirements. For standard boxes, we typically require a minimum of 100 pieces. Custom printed boxes may have higher minimums. Contact us for specific MOQ details for your requirements.
+                  </AccordionContent>
+                </AccordionItem>
+
+                <AccordionItem value="item-5" className="bg-card border border-border rounded-lg px-4">
+                  <AccordionTrigger className="text-left text-foreground hover:no-underline">
+                    What are the best corrugated boxes for shipping?
+                  </AccordionTrigger>
+                  <AccordionContent className="text-muted-foreground">
+                    For shipping, we recommend Regular Slotted Containers (RSC) for general products, and Full Overlap Containers (FOL) for heavy or fragile items. The choice depends on product weight, fragility, and shipping distance. Our team can help you select the optimal box type for your needs.
+                  </AccordionContent>
+                </AccordionItem>
+
+                <AccordionItem value="item-6" className="bg-card border border-border rounded-lg px-4">
+                  <AccordionTrigger className="text-left text-foreground hover:no-underline">
+                    Where is PackWave Industries located?
+                  </AccordionTrigger>
+                  <AccordionContent className="text-muted-foreground">
+                    PackWave Industries is located in Gujarat, India. We serve businesses across Gujarat and throughout India with our corrugated packaging solutions. Our central location allows for efficient delivery to major industrial hubs across the country.
+                  </AccordionContent>
+                </AccordionItem>
+
+                <AccordionItem value="item-7" className="bg-card border border-border rounded-lg px-4">
+                  <AccordionTrigger className="text-left text-foreground hover:no-underline">
+                    Does PackWave offer custom printed boxes?
+                  </AccordionTrigger>
+                  <AccordionContent className="text-muted-foreground">
+                    Yes, we offer custom printing on corrugated boxes including your logo, brand colors, product information, and handling instructions. We provide both flexographic and digital printing options depending on your quantity and design requirements.
+                  </AccordionContent>
+                </AccordionItem>
+
+                <AccordionItem value="item-8" className="bg-card border border-border rounded-lg px-4">
+                  <AccordionTrigger className="text-left text-foreground hover:no-underline">
+                    What is the price of corrugated boxes in India?
+                  </AccordionTrigger>
+                  <AccordionContent className="text-muted-foreground">
+                    Corrugated box prices vary based on size, ply (3-ply, 5-ply, 7-ply), quantity, and customization. PackWave Industries offers competitive pricing with bulk discounts. Contact us with your specifications for a free, no-obligation quote tailored to your requirements.
+                  </AccordionContent>
+                </AccordionItem>
+              </Accordion>
             </div>
           </section>
         </div>
