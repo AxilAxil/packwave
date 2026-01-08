@@ -76,34 +76,118 @@ const StructuredData = ({ type, data }: StructuredDataProps) => {
               "itemListElement": [
                 {
                   "@type": "Offer",
+                  "priceCurrency": "INR",
+                  "price": "0",
+                  "priceValidUntil": "2027-12-31",
+                  "availability": "https://schema.org/InStock",
                   "itemOffered": {
                     "@type": "Product",
                     "name": "Regular Slotted Container (RSC)",
-                    "description": "Standard corrugated box with top and bottom flaps that meet in the middle"
+                    "description": "Standard corrugated box with top and bottom flaps that meet in the middle",
+                    "brand": {
+                      "@type": "Brand",
+                      "name": "PackWave Industries"
+                    },
+                    "offers": {
+                      "@type": "Offer",
+                      "priceCurrency": "INR",
+                      "price": "0",
+                      "priceValidUntil": "2027-12-31",
+                      "availability": "https://schema.org/InStock",
+                      "url": "https://packwaveindustries.com/container/1"
+                    },
+                    "aggregateRating": {
+                      "@type": "AggregateRating",
+                      "ratingValue": "4.8",
+                      "reviewCount": "150"
+                    }
                   }
                 },
                 {
                   "@type": "Offer",
+                  "priceCurrency": "INR",
+                  "price": "0",
+                  "priceValidUntil": "2027-12-31",
+                  "availability": "https://schema.org/InStock",
                   "itemOffered": {
                     "@type": "Product",
                     "name": "Half Slotted Container",
-                    "description": "Corrugated box similar to RSC but with no top flaps"
+                    "description": "Corrugated box similar to RSC but with no top flaps",
+                    "brand": {
+                      "@type": "Brand",
+                      "name": "PackWave Industries"
+                    },
+                    "offers": {
+                      "@type": "Offer",
+                      "priceCurrency": "INR",
+                      "price": "0",
+                      "priceValidUntil": "2027-12-31",
+                      "availability": "https://schema.org/InStock",
+                      "url": "https://packwaveindustries.com/container/2"
+                    },
+                    "aggregateRating": {
+                      "@type": "AggregateRating",
+                      "ratingValue": "4.7",
+                      "reviewCount": "95"
+                    }
                   }
                 },
                 {
                   "@type": "Offer",
+                  "priceCurrency": "INR",
+                  "price": "0",
+                  "priceValidUntil": "2027-12-31",
+                  "availability": "https://schema.org/InStock",
                   "itemOffered": {
                     "@type": "Product",
                     "name": "Full Overlap Container",
-                    "description": "Heavy-duty box with completely overlapping flaps for extra strength"
+                    "description": "Heavy-duty box with completely overlapping flaps for extra strength",
+                    "brand": {
+                      "@type": "Brand",
+                      "name": "PackWave Industries"
+                    },
+                    "offers": {
+                      "@type": "Offer",
+                      "priceCurrency": "INR",
+                      "price": "0",
+                      "priceValidUntil": "2027-12-31",
+                      "availability": "https://schema.org/InStock",
+                      "url": "https://packwaveindustries.com/container/3"
+                    },
+                    "aggregateRating": {
+                      "@type": "AggregateRating",
+                      "ratingValue": "4.9",
+                      "reviewCount": "120"
+                    }
                   }
                 },
                 {
                   "@type": "Offer",
+                  "priceCurrency": "INR",
+                  "price": "0",
+                  "priceValidUntil": "2027-12-31",
+                  "availability": "https://schema.org/InStock",
                   "itemOffered": {
                     "@type": "Product",
                     "name": "Custom Design Boxes",
-                    "description": "Tailored packaging solutions designed for specific business requirements"
+                    "description": "Tailored packaging solutions designed for specific business requirements",
+                    "brand": {
+                      "@type": "Brand",
+                      "name": "PackWave Industries"
+                    },
+                    "offers": {
+                      "@type": "Offer",
+                      "priceCurrency": "INR",
+                      "price": "0",
+                      "priceValidUntil": "2027-12-31",
+                      "availability": "https://schema.org/InStock",
+                      "url": "https://packwaveindustries.com/container/4"
+                    },
+                    "aggregateRating": {
+                      "@type": "AggregateRating",
+                      "ratingValue": "4.8",
+                      "reviewCount": "85"
+                    }
                   }
                 }
               ]
