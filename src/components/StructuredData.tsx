@@ -84,6 +84,7 @@ const StructuredData = ({ type, data }: StructuredDataProps) => {
                     "@type": "Product",
                     "name": "Regular Slotted Container (RSC)",
                     "description": "Standard corrugated box with top and bottom flaps that meet in the middle",
+                    "image": "https://packwaveindustries.com/regular-slotted-container.png",
                     "brand": {
                       "@type": "Brand",
                       "name": "PackWave Industries"
@@ -94,7 +95,37 @@ const StructuredData = ({ type, data }: StructuredDataProps) => {
                       "price": "0",
                       "priceValidUntil": "2027-12-31",
                       "availability": "https://schema.org/InStock",
-                      "url": "https://packwaveindustries.com/container/1"
+                      "url": "https://packwaveindustries.com/container/1",
+                      "shippingDetails": {
+                        "@type": "OfferShippingDetails",
+                        "shippingDestination": {
+                          "@type": "DefinedRegion",
+                          "addressCountry": "IN"
+                        },
+                        "deliveryTime": {
+                          "@type": "ShippingDeliveryTime",
+                          "handlingTime": {
+                            "@type": "QuantitativeValue",
+                            "minValue": 1,
+                            "maxValue": 3,
+                            "unitCode": "DAY"
+                          },
+                          "transitTime": {
+                            "@type": "QuantitativeValue",
+                            "minValue": 2,
+                            "maxValue": 7,
+                            "unitCode": "DAY"
+                          }
+                        }
+                      },
+                      "hasMerchantReturnPolicy": {
+                        "@type": "MerchantReturnPolicy",
+                        "applicableCountry": "IN",
+                        "returnPolicyCategory": "https://schema.org/MerchantReturnFiniteReturnWindow",
+                        "merchantReturnDays": 7,
+                        "returnMethod": "https://schema.org/ReturnByMail",
+                        "returnFees": "https://schema.org/FreeReturn"
+                      }
                     },
                     "aggregateRating": {
                       "@type": "AggregateRating",
@@ -113,6 +144,7 @@ const StructuredData = ({ type, data }: StructuredDataProps) => {
                     "@type": "Product",
                     "name": "Half Slotted Container",
                     "description": "Corrugated box similar to RSC but with no top flaps",
+                    "image": "https://packwaveindustries.com/half-slotted-container.png",
                     "brand": {
                       "@type": "Brand",
                       "name": "PackWave Industries"
@@ -123,7 +155,37 @@ const StructuredData = ({ type, data }: StructuredDataProps) => {
                       "price": "0",
                       "priceValidUntil": "2027-12-31",
                       "availability": "https://schema.org/InStock",
-                      "url": "https://packwaveindustries.com/container/2"
+                      "url": "https://packwaveindustries.com/container/2",
+                      "shippingDetails": {
+                        "@type": "OfferShippingDetails",
+                        "shippingDestination": {
+                          "@type": "DefinedRegion",
+                          "addressCountry": "IN"
+                        },
+                        "deliveryTime": {
+                          "@type": "ShippingDeliveryTime",
+                          "handlingTime": {
+                            "@type": "QuantitativeValue",
+                            "minValue": 1,
+                            "maxValue": 3,
+                            "unitCode": "DAY"
+                          },
+                          "transitTime": {
+                            "@type": "QuantitativeValue",
+                            "minValue": 2,
+                            "maxValue": 7,
+                            "unitCode": "DAY"
+                          }
+                        }
+                      },
+                      "hasMerchantReturnPolicy": {
+                        "@type": "MerchantReturnPolicy",
+                        "applicableCountry": "IN",
+                        "returnPolicyCategory": "https://schema.org/MerchantReturnFiniteReturnWindow",
+                        "merchantReturnDays": 7,
+                        "returnMethod": "https://schema.org/ReturnByMail",
+                        "returnFees": "https://schema.org/FreeReturn"
+                      }
                     },
                     "aggregateRating": {
                       "@type": "AggregateRating",
@@ -142,6 +204,7 @@ const StructuredData = ({ type, data }: StructuredDataProps) => {
                     "@type": "Product",
                     "name": "Full Overlap Container",
                     "description": "Heavy-duty box with completely overlapping flaps for extra strength",
+                    "image": "https://packwaveindustries.com/full-overlap-container.png",
                     "brand": {
                       "@type": "Brand",
                       "name": "PackWave Industries"
@@ -152,7 +215,37 @@ const StructuredData = ({ type, data }: StructuredDataProps) => {
                       "price": "0",
                       "priceValidUntil": "2027-12-31",
                       "availability": "https://schema.org/InStock",
-                      "url": "https://packwaveindustries.com/container/3"
+                      "url": "https://packwaveindustries.com/container/3",
+                      "shippingDetails": {
+                        "@type": "OfferShippingDetails",
+                        "shippingDestination": {
+                          "@type": "DefinedRegion",
+                          "addressCountry": "IN"
+                        },
+                        "deliveryTime": {
+                          "@type": "ShippingDeliveryTime",
+                          "handlingTime": {
+                            "@type": "QuantitativeValue",
+                            "minValue": 1,
+                            "maxValue": 3,
+                            "unitCode": "DAY"
+                          },
+                          "transitTime": {
+                            "@type": "QuantitativeValue",
+                            "minValue": 2,
+                            "maxValue": 7,
+                            "unitCode": "DAY"
+                          }
+                        }
+                      },
+                      "hasMerchantReturnPolicy": {
+                        "@type": "MerchantReturnPolicy",
+                        "applicableCountry": "IN",
+                        "returnPolicyCategory": "https://schema.org/MerchantReturnFiniteReturnWindow",
+                        "merchantReturnDays": 7,
+                        "returnMethod": "https://schema.org/ReturnByMail",
+                        "returnFees": "https://schema.org/FreeReturn"
+                      }
                     },
                     "aggregateRating": {
                       "@type": "AggregateRating",
@@ -171,6 +264,7 @@ const StructuredData = ({ type, data }: StructuredDataProps) => {
                     "@type": "Product",
                     "name": "Custom Design Boxes",
                     "description": "Tailored packaging solutions designed for specific business requirements",
+                    "image": "https://packwaveindustries.com/custom-design.png",
                     "brand": {
                       "@type": "Brand",
                       "name": "PackWave Industries"
@@ -181,7 +275,37 @@ const StructuredData = ({ type, data }: StructuredDataProps) => {
                       "price": "0",
                       "priceValidUntil": "2027-12-31",
                       "availability": "https://schema.org/InStock",
-                      "url": "https://packwaveindustries.com/container/4"
+                      "url": "https://packwaveindustries.com/container/4",
+                      "shippingDetails": {
+                        "@type": "OfferShippingDetails",
+                        "shippingDestination": {
+                          "@type": "DefinedRegion",
+                          "addressCountry": "IN"
+                        },
+                        "deliveryTime": {
+                          "@type": "ShippingDeliveryTime",
+                          "handlingTime": {
+                            "@type": "QuantitativeValue",
+                            "minValue": 1,
+                            "maxValue": 3,
+                            "unitCode": "DAY"
+                          },
+                          "transitTime": {
+                            "@type": "QuantitativeValue",
+                            "minValue": 2,
+                            "maxValue": 7,
+                            "unitCode": "DAY"
+                          }
+                        }
+                      },
+                      "hasMerchantReturnPolicy": {
+                        "@type": "MerchantReturnPolicy",
+                        "applicableCountry": "IN",
+                        "returnPolicyCategory": "https://schema.org/MerchantReturnFiniteReturnWindow",
+                        "merchantReturnDays": 7,
+                        "returnMethod": "https://schema.org/ReturnByMail",
+                        "returnFees": "https://schema.org/FreeReturn"
+                      }
                     },
                     "aggregateRating": {
                       "@type": "AggregateRating",
